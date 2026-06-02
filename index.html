@@ -3,93 +3,186 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-  <title>GheaShop | Toko Digital Resmi - Topup Game & Panel Terpercaya + Fee Admin</title>
+  <title>GheaShoping | Auto Delivery - Topup Game, Token Listrik & Saldo Digital</title>
   <!-- Google Fonts + Font Awesome 6 -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Inter', sans-serif; background: #0a0c12; color: #f0f3fa; line-height: 1.5; scroll-behavior: smooth; }
+    .bg-digital { position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -2; background: radial-gradient(circle at 10% 20%, #0f172a, #020617); }
+    .bg-digital::before { content: ""; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4MCIgaGVpZ2h0PSI4MCIgdmlld0JveD0iMCAwIDQwIDQwIj48cGF0aCBmaWxsPSIjMjIyMjQ0IiBmaWxsLW9wYWNpdHk9IjAuMDMiIGQ9Ik0wIDBoNDB2NDBIMHoiLz48cGF0aCBkPSJNMjAgMTBhMTAgMTAgMCAwIDEgMCAyMCAxMCAxMCAwIDAgMSAwLTIweiIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjMjgyYzNjIiBzdHJva2Utd2lkdGg9IjAuNSIvPjwvc3ZnPg=='); background-repeat: repeat; opacity: 0.2; pointer-events: none; }
+    .glass-card { background: rgba(18, 25, 45, 0.7); backdrop-filter: blur(12px); border-radius: 2rem; border: 1px solid rgba(80, 150, 255, 0.25); box-shadow: 0 20px 35px -12px rgba(0, 0, 0, 0.4); transition: transform 0.2s ease, box-shadow 0.2s ease; }
+    .glass-card:hover { transform: translateY(-5px); box-shadow: 0 25px 40px -12px rgba(0, 180, 255, 0.25); border-color: rgba(0, 200, 255, 0.5); }
+    .container { max-width: 1300px; margin: 0 auto; padding: 0 24px; }
+    .navbar { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; padding: 1.2rem 0; border-bottom: 1px solid rgba(72, 187, 255, 0.2); }
+    .logo-area { display: flex; align-items: center; gap: 12px; }
+    .logo-icon { background: linear-gradient(135deg, #2b6ef0, #00c6fb); width: 48px; height: 48px; border-radius: 20px; display: flex; align-items: center; justify-content: center; font-size: 28px; box-shadow: 0 6px 14px rgba(0, 160, 255, 0.3); }
+    .logo-text h1 { font-size: 1.8rem; font-weight: 800; background: linear-gradient(120deg, #fff, #74d4ff); -webkit-background-clip: text; background-clip: text; color: transparent; }
+    .official-badge { display: flex; align-items: center; gap: 8px; background: rgba(0, 255, 170, 0.12); padding: 6px 14px; border-radius: 40px; font-size: 0.85rem; font-weight: 500; border: 1px solid #00e0ff3d; }
+    .official-badge i { color: #2effb0; }
+    .section-title { font-size: 2rem; font-weight: 700; margin: 2rem 0 1.5rem 0; display: inline-block; background: linear-gradient(120deg, #ffffff, #7bc5ff); -webkit-background-clip: text; background-clip: text; color: transparent; border-left: 5px solid #00c3ff; padding-left: 20px; }
+    .section-sub { color: #94a3b8; margin-bottom: 1rem; }
+    .game-grid { display: flex; flex-wrap: wrap; gap: 14px; margin: 20px 0 10px; }
+    .game-badge { background: rgba(0, 30, 60, 0.7); backdrop-filter: blur(4px); padding: 10px 20px; border-radius: 40px; font-weight: 600; font-size: 0.9rem; border: 1px solid #2d4a7a; transition: all 0.2s; display: inline-flex; align-items: center; gap: 10px; cursor: pointer; }
+    .game-badge i { color: #3b82f6; }
+    .game-badge:hover { background: #1e2f4e; border-color: #3b82f6; }
+    .card-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1.8rem; margin: 2rem 0; }
+    .service-card { background: rgba(12, 20, 35, 0.75); backdrop-filter: blur(10px); border-radius: 1.5rem; padding: 1.5rem; border: 1px solid rgba(59, 130, 246, 0.3); transition: all 0.2s; }
+    .price-tag { font-weight: 800; font-size: 1.4rem; color: #ffd966; margin: 12px 0; }
+    .admin-fee-badge { background: rgba(255, 100, 50, 0.2); display: inline-block; padding: 4px 10px; border-radius: 30px; font-size: 0.7rem; font-weight: 600; color: #ffaa66; border: 1px solid #ff8c42; margin: 8px 0 4px; }
+    .btn-primary { background: linear-gradient(95deg, #1d72b8, #0e5a9c); border: none; padding: 12px 20px; border-radius: 40px; font-weight: 600; display: inline-flex; align-items: center; gap: 8px; color: white; cursor: pointer; transition: all 0.2s; font-size: 0.85rem; width: fit-content; margin-top: 12px; }
+    .btn-primary:hover { background: linear-gradient(95deg, #2a86cf, #126eb3); transform: scale(1.02); }
+    .payment-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.5rem; margin-top: 1rem; }
+    .payment-card { background: rgba(0, 0, 0, 0.45); backdrop-filter: blur(8px); border-radius: 1.5rem; padding: 1.2rem; text-align: center; border: 1px solid rgba(59, 130, 246, 0.4); }
+    .payment-number { background: #0f172a; padding: 8px 12px; border-radius: 40px; font-family: monospace; font-weight: 600; margin: 10px 0; border: 1px solid #3b82f6; color: #ffd966; word-break: break-all; }
+    .copy-btn { background: #1e2a3e; border: none; padding: 6px 14px; border-radius: 30px; color: white; font-size: 0.7rem; cursor: pointer; transition: 0.1s; margin-top: 6px; }
+    .copy-btn:hover { background: #2d3e5e; }
+    .token-chips { display: flex; flex-wrap: wrap; gap: 12px; margin: 20px 0; }
+    .token-chip { background: #0f172ad9; border: 1px solid #3282c7; padding: 10px 20px; border-radius: 60px; font-weight: 700; cursor: pointer; transition: 0.1s; }
+    .token-chip.active, .token-chip:hover { background: #2563eb; border-color: white; }
+    .ewallet-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1.2rem; margin-top: 1rem; }
+    .ewallet-item { background: rgba(21, 32, 55, 0.7); border-radius: 1.2rem; padding: 1rem; display: flex; flex-direction: column; gap: 10px; }
+    .ewallet-row { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 8px; }
+    .amount-input { background: #0f172a; border: 1px solid #2d4a7a; padding: 8px 12px; border-radius: 32px; width: 130px; color: white; text-align: center; }
+    .role-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(190px, 1fr)); gap: 1rem; margin: 1rem 0; }
+    .role-card { background: rgba(0, 0, 0, 0.45); padding: 0.9rem; border-radius: 1.2rem; text-align: center; border-left: 3px solid #3b82f6; cursor: pointer; transition: 0.1s; }
+    .role-card:hover { background: #1e2a47; }
+    .modal { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.8); backdrop-filter: blur(5px); justify-content: center; align-items: center; z-index: 1000; }
+    .modal-content { background: #0f172ad9; border-radius: 2rem; max-width: 500px; width: 90%; padding: 2rem; border: 1px solid #00c3ff; }
+    .modal-content input, .modal-content select { background: #1e293b; border: 1px solid #3b82f6; padding: 12px; border-radius: 40px; width: 100%; margin: 8px 0; color: white; }
+    .contact-links { display: flex; flex-wrap: wrap; justify-content: center; gap: 24px; margin: 2rem 0; }
+    .contact-card { background: rgba(0, 0, 0, 0.5); border-radius: 2rem; padding: 0.9rem 1.6rem; display: inline-flex; align-items: center; gap: 12px; backdrop-filter: blur(8px); }
+    .contact-card a { color: white; text-decoration: none; font-weight: 500; }
+    footer { margin-top: 4rem; padding: 2rem 0; text-align: center; border-top: 1px solid #1e2a3a; }
+    .toast-msg { position: fixed; bottom: 20px; left: 50%; transform: translateX(-50%); background: #10b981; color: white; padding: 10px 20px; border-radius: 40px; z-index: 999; opacity: 0; transition: 0.2s; pointer-events: none; }
+    @media (max-width: 760px) { .container { padding: 0 18px; } .section-title { font-size: 1.6rem; } }
+  </style>
+</head>
+<body>
+<div class="bg-digital"></div>
+<div class="toast-msg" id="toastMsg">✅ Tersalin!</div>
 
-    body {
-      font-family: 'Inter', sans-serif;
-      background: #0a0c12;
-      color: #f0f3fa;
-      line-height: 1.5;
-      scroll-behavior: smooth;
-    }
+<div class="container">
+  <div class="navbar">
+    <div class="logo-area"><div class="logo-icon"><i class="fas fa-store"></i></div><div class="logo-text"><h1>GheaShop</h1></div><div class="official-badge"><i class="fas fa-check-circle"></i> WEBSITE TOKO RESMI</div></div>
+    <div><i class="fas fa-bolt"></i> Auto Delivery System</div>
+  </div>
+  <div class="glass-card" style="padding: 2rem; margin: 2rem 0; text-align: center;">
+    <i class="fas fa-robot" style="font-size: 2.5rem; color: #00e0ff;"></i>
+    <h2 style="font-size: 1.8rem; margin: 1rem 0;">Sistem Auto Delivery</h2>
+    <p>Setelah transfer sesuai nominal dan kirim bukti, produk akan otomatis dikirim ke ID / nomor tujuan Anda.</p>
+  </div>
 
-    /* Background digital shop style with glowing gradient & noise */
-    .bg-digital {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      z-index: -2;
-      background: radial-gradient(circle at 10% 20%, #0f172a, #020617);
-    }
+  <!-- TOPUP GAMES -->
+  <div><div class="section-title"><i class="fas fa-gamepad"></i> TOPUP ALL GAMES</div><div class="game-grid" id="gameGrid"></div><div class="admin-fee-badge">+ Admin Rp1.000 per transaksi</div></div>
 
-    .bg-digital::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4MCIgaGVpZ2h0PSI4MCIgdmlld0JveD0iMCAwIDQwIDQwIj48cGF0aCBmaWxsPSIjMjIyMjQ0IiBmaWxsLW9wYWNpdHk9IjAuMDMiIGQ9Ik0wIDBoNDB2NDBIMHoiLz48cGF0aCBkPSJNMjAgMTBhMTAgMTAgMCAwIDEgMCAyMCAxMCAxMCAwIDAgMSAwLTIweiIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjMjgyYzNjIiBzdHJva2Utd2lkdGg9IjAuNSIvPjwvc3ZnPg==');
-      background-repeat: repeat;
-      opacity: 0.2;
-      pointer-events: none;
-    }
+  <!-- PANEL & ROLE -->
+  <div><div class="section-title"><i class="fas fa-tachometer-alt"></i> PANEL & ROLE TITLE</div><div class="card-grid"><div class="service-card"><i class="fas fa-chart-line" style="font-size:2rem;"></i><h3>Panel Biasa 1-UNLI</h3><div class="price-tag">Rp1.000 - Rp20.000</div><div class="admin-fee-badge">+ Admin Rp1.000</div><button class="btn-primary order-panel-btn" data-produk="Panel Biasa 1-UNLI" data-harga-min="1000" data-harga-max="20000">Beli Panel</button></div><div class="service-card"><i class="fas fa-server"></i><h3>Install Panel + Node - IJO</h3><div class="price-tag">Rp15.000</div><div class="admin-fee-badge">+ Admin Rp1.000</div><button class="btn-primary order-panel-btn" data-produk="Install Panel + Node IJO" data-harga-tetap="15000">Pesan Install</button></div><div class="service-card"><i class="fas fa-globe"></i><h3>Jasa Website Payment Gateway</h3><div class="price-tag">Mulai Rp30.000</div><div class="admin-fee-badge">+ Admin Rp2.000</div><button class="btn-primary order-panel-btn" data-produk="Jasa Website Payment Gateway" data-harga-tetap="30000">Konsultasi</button></div></div><div class="role-grid" id="roleGrid"></div></div>
 
-    /* glassmorphic card style */
-    .glass-card {
-      background: rgba(18, 25, 45, 0.7);
-      backdrop-filter: blur(12px);
-      border-radius: 2rem;
-      border: 1px solid rgba(80, 150, 255, 0.25);
-      box-shadow: 0 20px 35px -12px rgba(0, 0, 0, 0.4), 0 0 0 0.5px rgba(72, 187, 255, 0.1) inset;
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
-    }
+  <!-- TOKEN LISTRIK -->
+  <div><div class="section-title"><i class="fas fa-bolt"></i> TOKEN LISTRIK</div><div class="glass-card" style="padding:1.5rem;"><div class="admin-fee-badge">Admin Rp1.500</div><div class="token-chips" id="tokenChips"></div><div class="flex-between" style="gap:15px;margin-top:20px;"><input type="number" id="customTokenAmount" placeholder="Rp" value="50000" step="1000" min="10000" max="1000000" style="background:#0f172a; border:1px solid #3b82f6; border-radius:40px; padding:10px;color:white;"><button class="btn-primary" id="orderTokenBtn"><i class="fas fa-bolt"></i> Beli Token</button></div></div></div>
 
-    .glass-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 25px 40px -12px rgba(0, 180, 255, 0.25);
-      border-color: rgba(0, 200, 255, 0.5);
-    }
+  <!-- TOPUP SALDO -->
+  <div><div class="section-title"><i class="fas fa-wallet"></i> TOPUP SALDO DIGITAL</div><div class="admin-fee-badge">+ Admin Rp1.000</div><div class="ewallet-grid" id="ewalletGrid"></div></div>
 
-    .container {
-      max-width: 1300px;
-      margin: 0 auto;
-      padding: 0 24px;
-    }
+  <!-- METODE PEMBAYARAN (QRIS, DANA, GOPAY, SEABANK) -->
+  <div><div class="section-title"><i class="fas fa-credit-card"></i> METODE PEMBAYARAN</div><div class="payment-grid"><div class="payment-card"><h3><i class="fas fa-qrcode"></i> QRIS</h3><img src="https://o.uguu.se/ieRBwLbj.jpg" alt="QRIS" style="max-width:140px;margin:auto;border-radius:16px;cursor:pointer;" id="qrisImg"><button class="copy-btn" id="copyQrisLink">Salin Link QRIS</button></div><div class="payment-card"><h3><i class="fas fa-wallet"></i> DANA</h3><div class="payment-number">082117455692</div><div>A/N: DORI SXXXXL HXDXXI</div><button class="copy-btn" data-copy="082117455692">Salin No DANA</button></div><div class="payment-card"><h3><i class="fas fa-mobile-alt"></i> GOPAY</h3><div class="payment-number">083825922898</div><div>A/N: DORI SXXXXL HXDXXI</div><button class="copy-btn" data-copy="083825922898">Salin No GOPAY</button></div><div class="payment-card"><h3><i class="fas fa-university"></i> SEABANK</h3><div class="payment-number">901068812599</div><div>A/N: DORI SXXXXL HXDXXI</div><button class="copy-btn" data-copy="901068812599">Salin No Rekening</button></div></div></div>
 
-    /* Header */
-    .navbar {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      align-items: center;
-      padding: 1.2rem 0;
-      border-bottom: 1px solid rgba(72, 187, 255, 0.2);
-    }
+  <div><div class="section-title"><i class="fas fa-headset"></i> KONFIRMASI & BANTUAN</div><div class="contact-links"><div class="contact-card"><i class="fab fa-telegram fa-2x"></i><a href="https://t.me/momghea" target="_blank">Admin : @momghea</a></div><div class="contact-card"><i class="fab fa-telegram fa-2x"></i><a href="https://t.me/sesionpayment" target="_blank">Channel Payment</a></div></div></div>
+  <footer>© 2025 GheaShop — Auto Delivery System | Transfer sesuai nominal + kirim bukti -> otomatis diproses ke ID tujuan</footer>
+</div>
 
-    .logo-area {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-    }
+<!-- MODAL UNTUK INPUT ID / NOMOR TUJUAN -->
+<div id="orderModal" class="modal"><div class="modal-content"><h3 id="modalTitle">Detail Order</h3><div id="modalFields"></div><button id="submitOrderBtn" class="btn-primary" style="width:100%;margin-top:16px;"><i class="fab fa-telegram"></i> Kirim & Konfirmasi Pembayaran</button><button id="closeModal" style="margin-top:12px;background:transparent;border:1px solid gray;padding:8px;border-radius:40px;width:100%">Tutup</button></div></div>
 
-    .logo-icon {
-      background: linear-gradient(135deg, #2b6ef0, #00c6fb);
-      width: 48px;
-      height: 48px;
-      border-radius: 20px;
-      display: flex;
+<script>
+  // DATA PRODUK
+  const games = ["FREE FIRE","PUBG MOBILE","MOBILE LEGENDS","POINT BLANK","ROBLOX","VALORANT","GENSHIN IMPACT","DAN LAINNYA"];
+  const roles = [
+    { name:"Reseller Panel", price:5000 },{ name:"Admin Panel", price:10000 },{ name:"Owner Panel", price:20000 },
+    { name:"PT Panel", price:25000 },{ name:"TK Panel", price:30000 },{ name:"CEO", price:35000 },{ name:"Panel Dev Panel", price:35000 }
+  ];
+  const tokenNominals = [10000,20000,50000,100000,200000,500000,1000000];
+  const ewalletMethods = ["DANA","OVO","GOPAY","LINKAJA","SHOPEEPAY","SEABANK","BRI","BCA","BNI","OCBC"];
+  const ADMIN_FEE_GAME = 1000, ADMIN_FEE_TOKEN = 1500, ADMIN_FEE_SALDO = 1000, ADMIN_FEE_ROLE = 1000, ADMIN_FEE_PANEL = 1000;
+  
+  let currentOrder = { type:"", product:"", nominal:0, adminFee:0, total:0, extraData:{} };
+
+  function showToast(msg) { const t=document.getElementById('toastMsg'); t.innerText=msg; t.style.opacity='1'; setTimeout(()=>t.style.opacity='0',1800); }
+  // copy event
+  document.querySelectorAll('.copy-btn').forEach(btn=>{ btn.addEventListener('click',()=>{ if(btn.dataset.copy){ navigator.clipboard.writeText(btn.dataset.copy); showToast(`Nomor ${btn.dataset.copy} disalin`); } }); });
+  document.getElementById('copyQrisLink')?.addEventListener('click',()=>{ navigator.clipboard.writeText('https://o.uguu.se/ieRBwLbj.jpg'); showToast('Link QRIS disalin'); });
+  document.getElementById('qrisImg')?.addEventListener('click',()=>window.open('https://o.uguu.se/ieRBwLbj.jpg','_blank'));
+
+  function openModal(title, fieldsHtml, orderData) { 
+    currentOrder = orderData;
+    document.getElementById('modalTitle').innerHTML = title;
+    document.getElementById('modalFields').innerHTML = fieldsHtml;
+    document.getElementById('orderModal').style.display = 'flex';
+  }
+
+  // GENERATE UI
+  const gameContainer = document.getElementById('gameGrid');
+  games.forEach(g=>{ let div=document.createElement('div'); div.className='game-badge'; div.innerHTML=`<i class="fas fa-gamepad"></i> ${g}`; div.onclick=()=>requestGameTopup(g); gameContainer.appendChild(div); });
+
+  function requestGameTopup(gameName){
+    let modalFields = `<label>ID Game / Username:</label><input type="text" id="targetId" placeholder="Masukkan ID Game / User ID" required><label>Nominal Topup (Rp):</label><input type="number" id="nominalGame" placeholder="Contoh: 50000" min="1000" max="1000000" required><small>+ Admin Rp1.000 akan ditambahkan</small>`;
+    openModal(`Topup ${gameName}`, modalFields, { type:"game", product:gameName, adminFee:ADMIN_FEE_GAME });
+  }
+
+  // Role grid
+  const roleGrid = document.getElementById('roleGrid');
+  roles.forEach(r=>{ let card=document.createElement('div'); card.className='role-card'; card.innerHTML=`${r.name}<br><strong>Rp${r.price.toLocaleString()}</strong><br><span style="font-size:0.7rem;">+Admin Rp1.000</span>`; card.onclick=()=>requestRole(r); roleGrid.appendChild(card); });
+  function requestRole(role){
+    let modalFields = `<label>Nama / Username Telegram:</label><input type="text" id="userName" placeholder="Nama akun" required><label>ID Panel (jika ada):</label><input type="text" id="panelId" placeholder="Panel ID / User ID">`;
+    openModal(`Beli Role: ${role.name} (Rp${role.price.toLocaleString()})`, modalFields, { type:"role", product:role.name, nominal:role.price, adminFee:ADMIN_FEE_ROLE, extra:{rolePrice:role.price} });
+  }
+
+  // Panel tetap (3 panel)
+  document.querySelectorAll('.order-panel-btn').forEach(btn=>{
+    btn.onclick=()=>{
+      let product = btn.dataset.produk;
+      let hargaTetap = btn.dataset.hargaTetap ? parseInt(btn.dataset.hargaTetap) : null;
+      let hargaMin = btn.dataset.hargaMin ? parseInt(btn.dataset.hargaMin) : null;
+      let modalFields = `<label>Nama / Kontak Telegram:</label><input type="text" id="contactName" placeholder="Username atau nomor" required>`;
+      if(!hargaTetap && hargaMin){ modalFields += `<label>Nominal yang diinginkan (Rp${hargaMin.toLocaleString()} - Rp20.000):</label><input type="number" id="customNominalPanel" min="${hargaMin}" max="20000" placeholder="Masukkan nominal">`; }
+      openModal(`Pesan: ${product}`, modalFields, { type:"panel", product:product, adminFee:ADMIN_FEE_PANEL, fixedPrice:hargaTetap, minPrice:hargaMin, extra:{}});
+    };
+  });
+
+  // Token listrik
+  function renderTokenChips(){
+    let container = document.getElementById('tokenChips'); container.innerHTML='';
+    tokenNominals.forEach(n=>{ let chip=document.createElement('div'); chip.className='token-chip'; chip.innerText=`Rp ${n.toLocaleString()}`; chip.onclick=()=>{ document.getElementById('customTokenAmount').value=n; document.querySelectorAll('.token-chip').forEach(c=>c.classList.remove('active')); chip.classList.add('active'); }; container.appendChild(chip); });
+  }
+  document.getElementById('orderTokenBtn').onclick=()=>{
+    let tokenVal = parseInt(document.getElementById('customTokenAmount').value);
+    if(isNaN(tokenVal)) tokenVal=50000;
+    tokenVal = Math.min(Math.max(tokenVal,10000),1000000);
+    let total = tokenVal + ADMIN_FEE_TOKEN;
+    let modalFields = `<label>Nomor Meter / ID Pelanggan Token Listrik:</label><input type="text" id="meterNumber" placeholder="Masukkan nomor meter/listrik" required><label>Jumlah Pembayaran (sudah termasuk admin): Rp ${total.toLocaleString()}</label><input type="hidden" id="realTokenVal" value="${tokenVal}">`;
+    openModal(`Pembayaran Token Listrik (Rp${tokenVal.toLocaleString()} + Admin Rp1.500)`, modalFields, { type:"token", nominal:tokenVal, adminFee:ADMIN_FEE_TOKEN, total:total, product:"Token Listrik" });
+  };
+
+  // E-wallet topup
+  function renderEwallet(){
+    let grid = document.getElementById('ewalletGrid'); grid.innerHTML='';
+    ewalletMethods.forEach(m=>{
+      let card = document.createElement('div'); card.className='ewallet-item';
+      card.innerHTML = `<div class="ewallet-row"><strong>${m}</strong><span class="admin-fee-badge">Admin Rp1.000</span></div><div class="ewallet-row"><input type="number" class="amount-input" id="amount-${m}" value="50000" min="1000" max="1000000" step="1000"><button class="btn-primary saldo-topup" data-method="${m}" style="margin-top:0;padding:6px 12px;">Topup + Admin</button></div>`;
+      grid.appendChild(card);
+    });
+    document.querySelectorAll('.saldo-topup').forEach(btn=>{
+      btn.onclick=()=>{
+        let parent = btn.closest('.ewallet-item');
+        let amtInput = parent.querySelector('.amount-input');
+        let amount = parseInt(amtInput.value);
+        if(isNaN(amount)) amount=50000;
+        amount = Math.min(Math.max(amount,1000),1000000);
+        let total = amount + ADMIN_FEE_SALDO;
+        let method = btn.dataset.method;
+         display: flex;
       align-items: center;
       justify-content: center;
       font-size: 28px;

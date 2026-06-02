@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-  <title>GheaShop | Auto Delivery - Topup Game, Token Listrik & Saldo</title>
+  <title>GheaaHosting | Auto Beli - Topup Game, Token Listrik, Saldo & Panel Resmi</title>
+  <!-- Google Fonts + Font Awesome 6 -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <style>
@@ -25,27 +26,27 @@
     .game-grid { display: flex; flex-wrap: wrap; gap: 14px; margin: 20px 0 10px; }
     .game-badge { background: rgba(0, 30, 60, 0.7); backdrop-filter: blur(4px); padding: 10px 20px; border-radius: 40px; font-weight: 600; font-size: 0.9rem; border: 1px solid #2d4a7a; transition: all 0.2s; display: inline-flex; align-items: center; gap: 10px; cursor: pointer; }
     .game-badge i { color: #3b82f6; }
-    .game-badge:hover { background: #1e2f4e; border-color: #3b82f6; }
+    .game-badge:hover { background: #1e2f4e; border-color: #3b82f6; transform: scale(1.02); }
     .card-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1.8rem; margin: 2rem 0; }
     .service-card { background: rgba(12, 20, 35, 0.75); backdrop-filter: blur(10px); border-radius: 1.5rem; padding: 1.5rem; border: 1px solid rgba(59, 130, 246, 0.3); transition: all 0.2s; }
     .price-tag { font-weight: 800; font-size: 1.4rem; color: #ffd966; margin: 12px 0; }
     .admin-fee-badge { background: rgba(255, 100, 50, 0.2); display: inline-block; padding: 4px 10px; border-radius: 30px; font-size: 0.7rem; font-weight: 600; color: #ffaa66; border: 1px solid #ff8c42; margin: 8px 0 4px; }
     .btn-primary { background: linear-gradient(95deg, #1d72b8, #0e5a9c); border: none; padding: 12px 20px; border-radius: 40px; font-weight: 600; display: inline-flex; align-items: center; gap: 8px; color: white; cursor: pointer; transition: all 0.2s; font-size: 0.85rem; width: fit-content; margin-top: 12px; }
     .btn-primary:hover { background: linear-gradient(95deg, #2a86cf, #126eb3); transform: scale(1.02); }
-    .payment-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; margin-top: 1rem; }
+    .payment-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.5rem; margin-top: 1rem; }
     .payment-card { background: rgba(0, 0, 0, 0.45); backdrop-filter: blur(8px); border-radius: 1.5rem; padding: 1.2rem; text-align: center; border: 1px solid rgba(59, 130, 246, 0.4); }
-    .payment-number { background: #0f172a; padding: 8px 12px; border-radius: 40px; font-family: monospace; font-weight: 600; margin: 10px 0; border: 1px solid #3b82f6; color: #ffd966; }
+    .payment-number { background: #0f172a; padding: 8px 12px; border-radius: 40px; font-family: monospace; font-weight: 600; margin: 10px 0; border: 1px solid #3b82f6; color: #ffd966; word-break: break-all; }
     .copy-btn { background: #1e2a3e; border: none; padding: 6px 14px; border-radius: 30px; color: white; font-size: 0.7rem; cursor: pointer; margin-top: 6px; }
     .copy-btn:hover { background: #2d3e5e; }
     .token-chips { display: flex; flex-wrap: wrap; gap: 12px; margin: 20px 0; }
-    .token-chip { background: #0f172ad9; border: 1px solid #3282c7; padding: 10px 20px; border-radius: 60px; font-weight: 700; cursor: pointer; }
+    .token-chip { background: #0f172ad9; border: 1px solid #3282c7; padding: 10px 20px; border-radius: 60px; font-weight: 700; cursor: pointer; transition: 0.1s; }
     .token-chip.active, .token-chip:hover { background: #2563eb; border-color: white; }
     .ewallet-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1.2rem; margin-top: 1rem; }
     .ewallet-item { background: rgba(21, 32, 55, 0.7); border-radius: 1.2rem; padding: 1rem; display: flex; flex-direction: column; gap: 10px; }
     .ewallet-row { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 8px; }
     .amount-input { background: #0f172a; border: 1px solid #2d4a7a; padding: 8px 12px; border-radius: 32px; width: 130px; color: white; text-align: center; }
     .role-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(190px, 1fr)); gap: 1rem; margin: 1rem 0; }
-    .role-card { background: rgba(0, 0, 0, 0.45); padding: 0.9rem; border-radius: 1.2rem; text-align: center; border-left: 3px solid #3b82f6; cursor: pointer; }
+    .role-card { background: rgba(0, 0, 0, 0.45); padding: 0.9rem; border-radius: 1.2rem; text-align: center; border-left: 3px solid #3b82f6; cursor: pointer; transition: 0.1s; }
     .role-card:hover { background: #1e2a47; }
     .modal { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.85); backdrop-filter: blur(8px); justify-content: center; align-items: center; z-index: 1000; }
     .modal-content { background: #0f172ad9; border-radius: 2rem; max-width: 500px; width: 90%; padding: 2rem; border: 1px solid #00c3ff; }
@@ -64,128 +65,212 @@
 
 <div class="container">
   <div class="navbar">
-    <div class="logo-area"><div class="logo-icon"><i class="fas fa-store"></i></div><div class="logo-text"><h1>GheaShop</h1></div><div class="official-badge"><i class="fas fa-check-circle"></i> WEBSITE TOKO RESMI</div></div>
+    <div class="logo-area"><div class="logo-icon"><i class="fas fa-store"></i></div><div class="logo-text"><h1>GheaaHosting</h1></div><div class="official-badge"><i class="fas fa-check-circle"></i> WEBSITE TOKO RESMI</div></div>
     <div><i class="fas fa-robot"></i> Auto Delivery System</div>
   </div>
-
   <div class="glass-card" style="padding: 2rem; margin: 2rem 0; text-align: center;">
-    <i class="fas fa-bolt" style="font-size: 2.5rem; color: #00e0ff;"></i>
-    <h2 style="font-size: 1.8rem; margin: 1rem 0;">Sistem Auto Delivery</h2>
-    <p>Isi data tujuan (ID Game / Nomor Meter / Rekening). Transfer sesuai total + kirim bukti ke Admin.<br>Produk akan otomatis masuk ke data yang Anda masukkan.</p>
+    <i class="fas fa-sync-alt" style="font-size: 2.5rem; color: #00e0ff;"></i>
+    <h2 style="font-size: 1.8rem; margin: 1rem 0;">Pembayaran Otomatis + Kirim Bukti</h2>
+    <p>Setelah transfer sesuai nominal dan kirim bukti, produk akan otomatis diproses ke ID Game / nomor tujuan / username Telegram Anda.</p>
   </div>
 
-  <!-- TOPUP GAMES -->
-  <div><div class="section-title"><i class="fas fa-gamepad"></i> TOPUP ALL GAMES</div><div class="game-grid" id="gameGrid"></div><div class="admin-fee-badge">+ Admin Rp1.000</div></div>
+  <!-- 1. TOPUP GAMES (ID GAME wajib) -->
+  <div><div class="section-title"><i class="fas fa-gamepad"></i> TOPUP ALL GAMES</div><div class="game-grid" id="gameGrid"></div><div class="admin-fee-badge">+ Admin Rp1.000 per transaksi</div></div>
 
-  <!-- PANEL & ROLE -->
-  <div><div class="section-title"><i class="fas fa-tachometer-alt"></i> PANEL & ROLE</div><div class="card-grid" id="panelGrid"></div><div class="role-grid" id="roleGrid"></div></div>
+  <!-- 2. PANEL & ROLE TITLE (hanya username telegram) -->
+  <div><div class="section-title"><i class="fas fa-tachometer-alt"></i> TOKO PANEL & ROLE TITLE</div>
+    <div class="card-grid">
+      <div class="service-card"><i class="fas fa-chart-line"></i><h3>Panel Pterodactyl 1GB-Unli</h3><div class="price-tag">Rp1.000 - Rp20.000</div><div class="admin-fee-badge">+ Admin Rp1.000</div><button class="btn-primary panel-order-btn" data-produk="Panel Pterodactyl 1GB-Unli" data-harga-min="1000" data-harga-max="20000">Beli Panel</button></div>
+      <div class="service-card"><i class="fas fa-server"></i><h3>Install Panel + Node - IJO</h3><div class="price-tag">Rp15.000</div><div class="admin-fee-badge">+ Admin Rp1.000</div><button class="btn-primary panel-order-btn" data-produk="Install Panel + Node IJO" data-harga-tetap="15000">Pesan Install</button></div>
+      <div class="service-card"><i class="fas fa-globe"></i><h3>Jasa Website Payment Gateway</h3><div class="price-tag">Mulai Rp300.000</div><div class="admin-fee-badge">+ Admin Rp2.000</div><button class="btn-primary panel-order-btn" data-produk="Jasa Website Payment Gateway" data-harga-tetap="30000">Konsultasi</button></div>
+    </div>
+    <div class="admin-fee-badge" style="margin-bottom:10px;">Role Title hanya menggunakan username Telegram pembeli</div>
+    <div class="role-grid" id="roleGrid"></div>
+  </div>
 
-  <!-- TOKEN LISTRIK -->
-  <div><div class="section-title"><i class="fas fa-bolt"></i> TOKEN LISTRIK</div><div class="glass-card" style="padding:1.5rem;"><div class="admin-fee-badge">Admin Rp1.500</div><div class="token-chips" id="tokenChips"></div><div class="flex-between" style="gap:15px;margin-top:20px;"><input type="number" id="customTokenAmount" placeholder="Rp" value="50000" step="1000" min="10000" max="1000000" style="background:#0f172a; border:1px solid #3b82f6; border-radius:40px; padding:10px;color:white;"><button class="btn-primary" id="orderTokenBtn"><i class="fas fa-bolt"></i> Beli Token</button></div></div></div>
+  <!-- 3. TOKEN LISTRIK (nomor meter) -->
+  <div><div class="section-title"><i class="fas fa-bolt"></i> TOKEN LISTRIK</div><div class="glass-card" style="padding:1.5rem;"><div class="admin-fee-badge">Admin Rp1.500</div><div class="token-chips" id="tokenChips"></div><div class="flex-between" style="gap:15px;margin-top:20px;"><input type="number" id="customTokenAmount" placeholder="Rp" value="50000" step="1000" min="10000" max="1000000" style="background:#0f172a; border:1px solid #3b82f6; border-radius:40px; padding:10px;color:white;"><button class="btn-primary" id="orderTokenBtn"><i class="fas fa-bolt"></i> Beli Token + Admin</button></div></div></div>
 
-  <!-- TOPUP SALDO -->
+  <!-- 4. TOPUP SALDO (nomor akun bank/ewallet) -->
   <div><div class="section-title"><i class="fas fa-wallet"></i> TOPUP SALDO DIGITAL</div><div class="admin-fee-badge">+ Admin Rp1.000</div><div class="ewallet-grid" id="ewalletGrid"></div></div>
 
-  <!-- METODE PEMBAYARAN -->
-  <div><div class="section-title"><i class="fas fa-credit-card"></i> METODE PEMBAYARAN</div><div class="payment-grid"><div class="payment-card"><h3><i class="fas fa-qrcode"></i> QRIS</h3><img src="https://o.uguu.se/ieRBwLbj.jpg" alt="QRIS" style="max-width:140px;margin:auto;border-radius:16px;cursor:pointer;" id="qrisImg"><button class="copy-btn" id="copyQrisLink">Salin Link QRIS</button></div><div class="payment-card"><h3><i class="fas fa-wallet"></i> DANA</h3><div class="payment-number">082117455692</div><div>A/N: DORI SXXXXL HXDXXI</div><button class="copy-btn" data-copy="082117455692">Salin No DANA</button></div><div class="payment-card"><h3><i class="fas fa-mobile-alt"></i> GOPAY</h3><div class="payment-number">083825922898</div><div>A/N: DORI SXXXXL HXDXXI</div><button class="copy-btn" data-copy="083825922898">Salin No GOPAY</button></div><div class="payment-card"><h3><i class="fas fa-university"></i> SEABANK</h3><div class="payment-number">901068812599</div><div>A/N: DORI SXXXXL HXDXXI</div><button class="copy-btn" data-copy="901068812599">Salin No Rekening</button></div></div></div>
+  <!-- METODE PEMBAYARAN (QRIS, DANA, GOPAY, SEABANK) -->
+  <div><div class="section-title"><i class="fas fa-credit-card"></i> METODE PEMBAYARAN</div><div class="payment-grid">
+    <div class="payment-card"><h3><i class="fas fa-qrcode"></i> QRIS</h3><img src="https://o.uguu.se/ieRBwLbj.jpg" alt="QRIS" style="max-width:130px;margin:auto;border-radius:16px;cursor:pointer;" id="qrisImg"><button class="copy-btn" id="copyQrisLink">Salin Link QRIS</button></div>
+    <div class="payment-card"><h3><i class="fas fa-wallet"></i> DANA</h3><div class="payment-number">082117455692</div><div>A/N: DORI SXXXXL HXDXXI</div><button class="copy-btn" data-copy="082117455692">Salin No DANA</button></div>
+    <div class="payment-card"><h3><i class="fas fa-mobile-alt"></i> GOPAY</h3><div class="payment-number">083825922898</div><div>A/N: DORI SXXXXL HXDXXI</div><button class="copy-btn" data-copy="083825922898">Salin No GOPAY</button></div>
+    <div class="payment-card"><h3><i class="fas fa-university"></i> SEABANK</h3><div class="payment-number">901068812599</div><div>A/N: DORI SXXXXL HXDXXI</div><button class="copy-btn" data-copy="901068812599">Salin No Rekening</button></div>
+  </div></div>
 
-  <div><div class="section-title"><i class="fas fa-headset"></i> KONFIRMASI</div><div class="contact-links"><div class="contact-card"><i class="fab fa-telegram fa-2x"></i><a href="https://t.me/momghea" target="_blank">Admin : @momghea</a></div><div class="contact-card"><i class="fab fa-telegram fa-2x"></i><a href="https://t.me/sesionpayment" target="_blank">Channel Payment</a></div></div></div>
-  <footer>© 2025 GheaShop — Auto Delivery | Transfer sesuai total + kirim bukti → Produk otomatis dikirim ke data tujuan Anda.</footer>
+  <div><div class="section-title"><i class="fas fa-headset"></i> KONFIRMASI & BANTUAN</div><div class="contact-links"><div class="contact-card"><i class="fab fa-telegram fa-2x"></i><a href="https://t.me/momghea" target="_blank">Admin : @momghea</a></div><div class="contact-card"><i class="fab fa-telegram fa-2x"></i><a href="https://t.me/sesionpayment" target="_blank">Channel Payment</a></div></div></div>
+  <footer>© 2025 GheaaHosting — Auto Beli | Transfer sesuai nominal + kirim bukti -> produk dikirim ke ID Game / nomor meter / username TG</footer>
 </div>
 
-<div id="orderModal" class="modal"><div class="modal-content"><h3 id="modalTitle">Detail Order</h3><div id="modalFields"></div><button id="submitOrderBtn" class="btn-primary" style="width:100%;margin-top:16px;"><i class="fab fa-telegram"></i> Kirim & Konfirmasi Pembayaran</button><button id="closeModal" style="margin-top:12px;background:transparent;border:1px solid gray;padding:8px;border-radius:40px;width:100%">Tutup</button></div></div>
+<!-- MODAL untuk input detail tujuan -->
+<div id="orderModal" class="modal"><div class="modal-content"><h3 id="modalTitle">Detail Order</h3><div id="modalFields"></div><button id="submitOrderBtn" class="btn-primary" style="width:100%;margin-top:16px;"><i class="fab fa-telegram"></i> Kirim Pesanan & Konfirmasi</button><button id="closeModal" style="margin-top:12px;background:transparent;border:1px solid gray;padding:8px;border-radius:40px;width:100%">Tutup</button></div></div>
 
 <script>
-  // Daftar produk
-  const games = ["FREE FIRE", "PUBG MOBILE", "MOBILE LEGENDS", "POINT BLANK", "ROBLOX", "GENSHIN IMPACT", "DAN LAINNYA"];
-  const roles = [{ name:"Reseller Panel", price:5000 },{ name:"Admin Panel", price:10000 },{ name:"Owner Panel", price:20000 },{ name:"PT Panel", price:25000 },{ name:"TK Panel", price:30000 },{ name:"CEO", price:35000 },{ name:"Panel Dev Panel", price:35000 }];
-  const panels = [{ name:"Panel Biasa 1-UNLI", priceMin:1000, priceMax:20000, desc:"Unlimited akses" },{ name:"Install Panel + Node IJO", priceFix:15000, desc:"Full support" },{ name:"Jasa Website Payment Gateway", priceFix:300000, desc:"Free custom" }];
+  // DATA PRODUK
+  const games = ["FREE FIRE","PUBG MOBILE","MOBILE LEGENDS","POINT BLANK","ROBLOX","VALORANT","GENSHIN IMPACT","DAN LAINNYA"];
+  const roles = [
+    { name:"Reseller Panel", price:5000 },{ name:"Admin Panel", price:10000 },{ name:"Owner Panel", price:20000 },
+    { name:"PT Panel", price:25000 },{ name:"TK Panel", price:30000 },{ name:"CEO", price:35000 },{ name:"Panel Dev Panel", price:45000 }
+  ];
   const tokenNominals = [10000,20000,50000,100000,200000,500000,1000000];
   const ewalletMethods = ["DANA","OVO","GOPAY","LINKAJA","SHOPEEPAY","SEABANK","BRI","BCA","BNI","OCBC"];
-  const ADMIN_FEE = { game:1000, token:1500, saldo:1000, role:1000, panel:1000 };
-  let currentOrder = { type:"", product:"", nominal:0, adminFee:0, total:0, targetField:"" };
+  const ADMIN_FEE_GAME = 1000, ADMIN_FEE_TOKEN = 1500, ADMIN_FEE_SALDO = 1000, ADMIN_FEE_ROLE = 1000, ADMIN_FEE_PANEL = 1000;
+  
+  let currentOrder = { type:"", product:"", nominal:0, adminFee:0, total:0, extraData:{} };
 
-  function showToast(msg) { let t=document.getElementById('toastMsg'); t.innerText=msg; t.style.opacity='1'; setTimeout(()=>t.style.opacity='0',1800); }
-  document.querySelectorAll('.copy-btn').forEach(btn=>{ btn.onclick=()=>{ if(btn.dataset.copy){ navigator.clipboard.writeText(btn.dataset.copy); showToast(`Nomor ${btn.dataset.copy} disalin`); } } });
+  function showToast(msg) { const t=document.getElementById('toastMsg'); t.innerText=msg; t.style.opacity='1'; setTimeout(()=>t.style.opacity='0',1800); }
+  // copy event
+  document.querySelectorAll('.copy-btn').forEach(btn=>{ btn.addEventListener('click',()=>{ if(btn.dataset.copy){ navigator.clipboard.writeText(btn.dataset.copy); showToast(`Nomor ${btn.dataset.copy} disalin`); } }); });
   document.getElementById('copyQrisLink')?.addEventListener('click',()=>{ navigator.clipboard.writeText('https://o.uguu.se/ieRBwLbj.jpg'); showToast('Link QRIS disalin'); });
   document.getElementById('qrisImg')?.addEventListener('click',()=>window.open('https://o.uguu.se/ieRBwLbj.jpg','_blank'));
 
-  function openModal(title, fieldsHtml, orderData) { currentOrder = orderData; document.getElementById('modalTitle').innerHTML = title; document.getElementById('modalFields').innerHTML = fieldsHtml; document.getElementById('orderModal').style.display = 'flex'; }
+  function openModal(title, fieldsHtml, orderData) { 
+    currentOrder = orderData;
+    document.getElementById('modalTitle').innerHTML = title;
+    document.getElementById('modalFields').innerHTML = fieldsHtml;
+    document.getElementById('orderModal').style.display = 'flex';
+  }
 
-  // Render Game
+  // GENERATE UI GAMES
   const gameContainer = document.getElementById('gameGrid');
-  games.forEach(g=>{ let div=document.createElement('div'); div.className='game-badge'; div.innerHTML=`<i class="fas fa-gamepad"></i> ${g}`; div.onclick=()=>{ let fields=`<label>ID Game / Username:</label><input type="text" id="targetId" placeholder="Masukkan ID Game / User ID" required><label>Nominal Topup (Rp):</label><input type="number" id="nominalGame" min="1000" max="1000000" required><small>+ Admin Rp1.000</small>`; openModal(`Topup ${g}`, fields, { type:"game", product:g, adminFee:ADMIN_FEE.game }); }; gameContainer.appendChild(div); });
+  games.forEach(g=>{ let div=document.createElement('div'); div.className='game-badge'; div.innerHTML=`<i class="fas fa-gamepad"></i> ${g}`; div.onclick=()=>requestGameTopup(g); gameContainer.appendChild(div); });
 
-  // Render Panel
-  const panelGrid = document.getElementById('panelGrid');
-  panels.forEach(p=>{ let card=document.createElement('div'); card.className='service-card'; let priceHtml = p.priceFix ? `Rp${p.priceFix.toLocaleString()}` : `Rp${p.priceMin.toLocaleString()} - Rp${p.priceMax.toLocaleString()}`; card.innerHTML=`<i class="fas fa-box"></i><h3>${p.name}</h3><p>${p.desc}</p><div class="price-tag">${priceHtml}</div><div class="admin-fee-badge">+ Admin Rp1.000</div><button class="btn-primary order-panel" data-panel='${JSON.stringify(p)}'>Beli</button>`; panelGrid.appendChild(card); });
-  document.querySelectorAll('.order-panel').forEach(btn=>{ btn.onclick=()=>{ let p=JSON.parse(btn.dataset.panel); let fields=`<label>Nama / Kontak Telegram:</label><input type="text" id="contactName" placeholder="Username" required>`; if(!p.priceFix) fields+=`<label>Nominal (Rp${p.priceMin.toLocaleString()} - ${p.priceMax.toLocaleString()}):</label><input type="number" id="customNominal" min="${p.priceMin}" max="${p.priceMax}" placeholder="Masukkan nominal">`; openModal(`Pesan: ${p.name}`, fields, { type:"panel", product:p.name, adminFee:ADMIN_FEE.panel, panelData:p }); }; });
+  function requestGameTopup(gameName){
+    let modalFields = `<label>ID Game / User ID (wajib):</label><input type="text" id="targetId" placeholder="Masukkan ID Game / User ID" required><label>Nominal Topup (Rp):</label><input type="number" id="nominalGame" placeholder="Contoh: 50000" min="1000" max="1000000" required><small class="admin-fee-badge">+ Admin Rp1.000 akan ditambahkan</small>`;
+    openModal(`Topup ${gameName}`, modalFields, { type:"game", product:gameName, adminFee:ADMIN_FEE_GAME });
+  }
 
-  // Render Role
+  // ROLE GRID (hanya username telegram)
   const roleGrid = document.getElementById('roleGrid');
-  roles.forEach(r=>{ let card=document.createElement('div'); card.className='role-card'; card.innerHTML=`${r.name}<br><strong>Rp${r.price.toLocaleString()}</strong><br><span style="font-size:0.7rem;">+Admin Rp1.000</span>`; card.onclick=()=>{ let fields=`<label>Username / ID Telegram:</label><input type="text" id="userIdRole" placeholder="Nama akun" required><label>ID Panel (opsional):</label><input type="text" id="panelIdRole" placeholder="ID Panel">`; openModal(`Beli Role: ${r.name}`, fields, { type:"role", product:r.name, nominal:r.price, adminFee:ADMIN_FEE.role }); }; roleGrid.appendChild(card); });
+  roles.forEach(r=>{ let card=document.createElement('div'); card.className='role-card'; card.innerHTML=`${r.name}<br><strong>Rp${r.price.toLocaleString()}</strong><br><span style="font-size:0.7rem;">+Admin Rp1.000</span>`; card.onclick=()=>requestRole(r); roleGrid.appendChild(card); });
+  function requestRole(role){
+    let modalFields = `<label>Username Telegram (wajib, tanpa @):</label><input type="text" id="tgUsername" placeholder="Contoh: johndoe" required><small>Role Title akan dikirim ke username Telegram ini.</small>`;
+    openModal(`Beli Role: ${role.name} (Rp${role.price.toLocaleString()})`, modalFields, { type:"role", product:role.name, nominal:role.price, adminFee:ADMIN_FEE_ROLE, extra:{rolePrice:role.price} });
+  }
 
-  // Token chips & order
-  const tokenContainer = document.getElementById('tokenChips');
-  tokenNominals.forEach(n=>{ let chip=document.createElement('div'); chip.className='token-chip'; chip.innerText=`Rp ${n.toLocaleString()}`; chip.onclick=()=>{ document.getElementById('customTokenAmount').value=n; document.querySelectorAll('.token-chip').forEach(c=>c.classList.remove('active')); chip.classList.add('active'); }; tokenContainer.appendChild(chip); });
-  document.getElementById('orderTokenBtn').onclick=()=>{ let val=parseInt(document.getElementById('customTokenAmount').value); if(isNaN(val)) val=50000; val=Math.min(Math.max(val,10000),1000000); let total=val+ADMIN_FEE.token; let fields=`<label>Nomor Meter / ID Pelanggan:</label><input type="text" id="meterNumber" placeholder="Masukkan nomor meter listrik" required><label>Total yang harus dibayar:</label><input type="text" value="Rp ${total.toLocaleString()}" disabled>`; openModal(`Token Listrik Rp${val.toLocaleString()}`, fields, { type:"token", nominal:val, adminFee:ADMIN_FEE.token, total:total }); };
+  // PANEL (Pterodactyl dan lainnya hanya username telegram)
+  document.querySelectorAll('.panel-order-btn').forEach(btn=>{
+    btn.onclick=()=>{
+      let product = btn.dataset.produk;
+      let hargaTetap = btn.dataset.hargaTetap ? parseInt(btn.dataset.hargaTetap) : null;
+      let hargaMin = btn.dataset.hargaMin ? parseInt(btn.dataset.hargaMin) : null;
+      let modalFields = `<label>Username Telegram (wajib, tanpa @):</label><input type="text" id="panelUsername" placeholder="Username telegram untuk aktivasi panel" required>`;
+      if(!hargaTetap && hargaMin){ modalFields += `<label>Nominal yang diinginkan (Rp${hargaMin.toLocaleString()} - Rp20.000):</label><input type="number" id="customNominalPanel" min="${hargaMin}" max="20000" placeholder="Masukkan nominal">`; }
+      openModal(`Pesan: ${product}`, modalFields, { type:"panel", product:product, adminFee:ADMIN_FEE_PANEL, fixedPrice:hargaTetap, minPrice:hargaMin });
+    };
+  });
 
-  // E-wallet topup
-  const ewalletGrid = document.getElementById('ewalletGrid');
-  ewalletMethods.forEach(m=>{ let card=document.createElement('div'); card.className='ewallet-item'; card.innerHTML=`<div class="ewallet-row"><strong>${m}</strong><span class="admin-fee-badge">Admin Rp1.000</span></div><div class="ewallet-row"><input type="number" class="amount-input" id="amount-${m}" value="50000" min="1000" max="1000000" step="1000"><button class="btn-primary saldo-topup" data-method="${m}" style="margin-top:0;padding:6px 12px;">Topup + Admin</button></div>`; ewalletGrid.appendChild(card); });
-  document.querySelectorAll('.saldo-topup').forEach(btn=>{ btn.onclick=()=>{ let parent=btn.closest('.ewallet-item'); let amt=parseInt(parent.querySelector('.amount-input').value); if(isNaN(amt)) amt=50000; amt=Math.min(Math.max(amt,1000),1000000); let total=amt+ADMIN_FEE.saldo; let method=btn.dataset.method; let fields=`<label>Nomor Akun ${method} / ID Penerima:</label><input type="text" id="destAccount" placeholder="Nomor ${method}" required><label>Total Bayar:</label><input type="text" value="Rp ${total.toLocaleString()}" disabled>`; openModal(`Topup Saldo ${method} (Rp${amt.toLocaleString()})`, fields, { type:"saldo", product:method, nominal:amt, adminFee:ADMIN_FEE.saldo, total:total }); }; });
+  // TOKEN LISTRIK (nomor meter)
+  function renderTokenChips(){
+    let container = document.getElementById('tokenChips'); container.innerHTML='';
+    tokenNominals.forEach(n=>{ let chip=document.createElement('div'); chip.className='token-chip'; chip.innerText=`Rp ${n.toLocaleString()}`; chip.onclick=()=>{ document.getElementById('customTokenAmount').value=n; document.querySelectorAll('.token-chip').forEach(c=>c.classList.remove('active')); chip.classList.add('active'); }; container.appendChild(chip); });
+  }
+  document.getElementById('orderTokenBtn').onclick=()=>{
+    let tokenVal = parseInt(document.getElementById('customTokenAmount').value);
+    if(isNaN(tokenVal)) tokenVal=50000;
+    tokenVal = Math.min(Math.max(tokenVal,10000),1000000);
+    let total = tokenVal + ADMIN_FEE_TOKEN;
+    let modalFields = `<label>Nomor Meter / ID Pelanggan Listrik (wajib):</label><input type="text" id="meterNumber" placeholder="Masukkan nomor meter/listrik" required><label>Nominal Token: Rp ${tokenVal.toLocaleString()}</label><label>Total + Admin: Rp ${total.toLocaleString()}</label><input type="hidden" id="realTokenVal" value="${tokenVal}">`;
+    openModal(`Pembayaran Token Listrik (Rp${tokenVal.toLocaleString()})`, modalFields, { type:"token", nominal:tokenVal, adminFee:ADMIN_FEE_TOKEN, total:total, product:"Token Listrik" });
+  };
 
-  // Submit order -> kirim ke admin dengan data tujuan (auto delivery)
+  // E-WALLET (nomor akun tujuan)
+  function renderEwallet(){
+    let grid = document.getElementById('ewalletGrid'); grid.innerHTML='';
+    ewalletMethods.forEach(m=>{
+      let card = document.createElement('div'); card.className='ewallet-item';
+      card.innerHTML = `<div class="ewallet-row"><strong>${m}</strong><span class="admin-fee-badge">Admin Rp1.000</span></div><div class="ewallet-row"><input type="number" class="amount-input" id="amount-${m}" value="50000" min="1000" max="1000000" step="1000"><button class="btn-primary saldo-topup" data-method="${m}" style="margin-top:0;padding:6px 12px;">Topup + Admin</button></div>`;
+      grid.appendChild(card);
+    });
+    document.querySelectorAll('.saldo-topup').forEach(btn=>{
+      btn.onclick=()=>{
+        let parent = btn.closest('.ewallet-item');
+        let amtInput = parent.querySelector('.amount-input');
+        let amount = parseInt(amtInput.value);
+        if(isNaN(amount)) amount=50000;
+        amount = Math.min(Math.max(amount,1000),1000000);
+        let total = amount + ADMIN_FEE_SALDO;
+        let method = btn.dataset.method;
+        let modalFields = `<label>Nomor Akun ${method} / ID Penerima (wajib):</label><input type="text" id="destinationAccount" placeholder="Contoh: 08123456789 / ID Game" required><label>Jumlah Saldo: Rp ${amount.toLocaleString()}</label><label>Total Bayar + Admin: Rp ${total.toLocaleString()}</label>`;
+        openModal(`Topup Saldo ${method}`, modalFields, { type:"saldo", product:method, nominal:amount, adminFee:ADMIN_FEE_SALDO, total:total });
+      };
+    });
+  }
+
+  // SUBMIT order -> kirim pesan ke admin dengan detail tujuan
   document.getElementById('submitOrderBtn').onclick = () => {
+    let modal = document.getElementById('orderModal');
     let order = currentOrder;
-    let targetValue = "", detailPesan = "";
+    let targetInfo = "";
+    let extraDesc = "";
+    let totalBayar = 0;
+
     if(order.type === "game"){
-      let idGame = document.getElementById('targetId')?.value;
+      let targetId = document.getElementById('targetId')?.value.trim();
       let nominalGame = parseInt(document.getElementById('nominalGame')?.value);
-      if(!idGame) return alert("Masukkan ID Game!");
-      if(isNaN(nominalGame) || nominalGame<1000) return alert("Nominal minimal Rp1.000");
-      let total = nominalGame + order.adminFee;
-      targetValue = idGame;
-      detailPesan = `🎮 GAME: ${order.product}\n📌 ID TUJUAN: ${idGame}\n💰 Nominal Topup: Rp${nominalGame.toLocaleString()}\n🧾 Admin: Rp${order.adminFee.toLocaleString()}\n💵 TOTAL BAYAR: Rp${total.toLocaleString()}\n\n✅ Setelah transfer, kirim bukti ke admin. Produk akan otomatis masuk ke ID: ${idGame}`;
+      if(!targetId) { alert("Masukkan ID Game!"); return; }
+      if(isNaN(nominalGame) || nominalGame<1000) { alert("Nominal minimal Rp1.000"); return; }
+      totalBayar = nominalGame + order.adminFee;
+      targetInfo = `🎮 ID GAME: ${targetId}`;
+      extraDesc = `Game: ${order.product}\nID Tujuan: ${targetId}\nNominal Topup: Rp${nominalGame.toLocaleString()}\nBiaya Admin: Rp${order.adminFee.toLocaleString()}\nTOTAL DIBayar: Rp${totalBayar.toLocaleString()}`;
+      order.total = totalBayar;
     } 
     else if(order.type === "role"){
-      let user = document.getElementById('userIdRole')?.value;
-      let panelId = document.getElementById('panelIdRole')?.value || "-";
-      if(!user) return alert("Masukkan username Anda");
+      let username = document.getElementById('tgUsername')?.value.trim();
+      if(!username) { alert("Masukkan username Telegram (tanpa @)!"); return; }
       let total = order.nominal + order.adminFee;
-      detailPesan = `👑 ROLE: ${order.product}\n👤 Nama: ${user}\n🆔 Panel ID: ${panelId}\n💵 Harga Role: Rp${order.nominal.toLocaleString()}\n🧾 Admin: Rp${order.adminFee.toLocaleString()}\n💵 TOTAL: Rp${total.toLocaleString()}\n\n✅ Setelah transfer & kirim bukti, Role akan diaktivasi ke akun: ${user}`;
+      targetInfo = `👤 USERNAME TELEGRAM: @${username}`;
+      extraDesc = `Role: ${order.product}\nUsername Telegram: @${username}\nHarga Role: Rp${order.nominal.toLocaleString()}\nAdmin: Rp${order.adminFee.toLocaleString()}\nTOTAL: Rp${total.toLocaleString()}`;
+      order.total = total;
     }
     else if(order.type === "panel"){
-      let contact = document.getElementById('contactName')?.value;
-      if(!contact) return alert("Masukkan kontak Anda");
-      let panel = order.panelData;
-      let finalPrice = panel.priceFix;
-      if(!finalPrice){
-        let custom = parseInt(document.getElementById('customNominal')?.value);
-        finalPrice = (custom && custom>=panel.priceMin && custom<=panel.priceMax) ? custom : panel.priceMin;
+      let username = document.getElementById('panelUsername')?.value.trim();
+      if(!username) { alert("Masukkan username Telegram untuk aktivasi panel!"); return; }
+      let finalPrice = order.fixedPrice;
+      if(!finalPrice && order.minPrice){
+        let customNom = parseInt(document.getElementById('customNominalPanel')?.value);
+        if(customNom && customNom>=order.minPrice) finalPrice = customNom;
+        else finalPrice = order.minPrice;
       }
+      if(!finalPrice) finalPrice = 15000;
       let total = finalPrice + order.adminFee;
-      detailPesan = `📦 PANEL: ${order.product}\n📞 Kontak: ${contact}\n💵 Harga Produk: Rp${finalPrice.toLocaleString()}\n🧾 Admin: Rp${order.adminFee.toLocaleString()}\n💵 TOTAL: Rp${total.toLocaleString()}\n\n✅ Setelah konfirmasi pembayaran, panel akan dikirim ke kontak ${contact}`;
+      targetInfo = `👤 USERNAME TELEGRAM: @${username}`;
+      extraDesc = `Panel: ${order.product}\nUsername Telegram: @${username}\nHarga Produk: Rp${finalPrice.toLocaleString()}\nAdmin: Rp${order.adminFee.toLocaleString()}\nTOTAL: Rp${total.toLocaleString()}`;
+      order.total = total;
     }
     else if(order.type === "token"){
-      let meter = document.getElementById('meterNumber')?.value;
-      if(!meter) return alert("Masukkan nomor meter listrik!");
+      let meter = document.getElementById('meterNumber')?.value.trim();
+      if(!meter) { alert("Masukkan nomor meter listrik!"); return; }
       let total = order.nominal + order.adminFee;
-      detailPesan = `⚡ TOKEN LISTRIK\n🔢 Nomor Meter: ${meter}\n💰 Harga Token: Rp${order.nominal.toLocaleString()}\n🧾 Admin: Rp${order.adminFee.toLocaleString()}\n💵 TOTAL: Rp${total.toLocaleString()}\n\n✅ Setelah transfer & kirim bukti, token akan otomatis dikirim ke nomor meter: ${meter}`;
+      targetInfo = `⚡ NOMOR METER: ${meter}`;
+      extraDesc = `TOKEN LISTRIK\nNomor Meter: ${meter}\nHarga Token: Rp${order.nominal.toLocaleString()}\nAdmin: Rp${order.adminFee.toLocaleString()}\nTOTAL: Rp${total.toLocaleString()}`;
+      order.total = total;
     }
     else if(order.type === "saldo"){
-      let dest = document.getElementById('destAccount')?.value;
-      if(!dest) return alert("Masukkan nomor akun tujuan!");
+      let dest = document.getElementById('destinationAccount')?.value.trim();
+      if(!dest) { alert("Masukkan nomor akun tujuan!"); return; }
       let total = order.nominal + order.adminFee;
-      detailPesan = `💳 TOPUP SALDO ${order.product}\n📱 Tujuan: ${dest}\n💰 Jumlah Saldo: Rp${order.nominal.toLocaleString()}\n🧾 Admin: Rp${order.adminFee.toLocaleString()}\n💵 TOTAL BAYAR: Rp${total.toLocaleString()}\n\n✅ Setelah transfer & kirim bukti, saldo akan otomatis masuk ke akun: ${dest}`;
+      targetInfo = `💳 TUJUAN: ${dest}`;
+      extraDesc = `Topup Saldo ${order.product}\nTujuan: ${dest}\nJumlah Saldo: Rp${order.nominal.toLocaleString()}\nAdmin: Rp${order.adminFee.toLocaleString()}\nTOTAL BAYAR: Rp${total.toLocaleString()}`;
+      order.total = total;
     }
-    let pesan = `🛒 *ORDER BARU - GHEAA AUTO DELIVERY*\n\n${detailPesan}\n\n📌 INSTRUKSI PEMBAYARAN:\nTransfer TOTAL Rp ${order.total || (order.nominal+order.adminFee)} ke:\nDANA: 082117455692 a/n DORI\nGOPAY: 083825922898 a/n DORI\nSEABANK: 901068812599 a/n DORI\nQRIS: https://o.uguu.se/ieRBwLbj.jpg\n\n⚠️ Setelah transfer, *KIRIM BUKTI TRANSFER* ke admin ini.\n🔁 Sistem akan otomatis mengirim produk ke data yang sudah Anda masukkan.`;
-    window.open(`https://t.me/momghea?text=${encodeURIComponent(pesan)}`, '_blank');
-    showToast("Pesanan dikirim! Selesaikan pembayaran & kirim bukti.");
-    document.getElementById('orderModal').style.display = 'none';
+
+    // Pesan lengkap ke admin (untuk diproses manual, tapi sistem menyatakan auto setelah bukti)
+    let pesan = `🛒 ORDER BARU (GheaaHosting Auto-Beli)\n\n${extraDesc}\n\n📌 TUJUAN PENGIRIMAN:\n${targetInfo}\n\n💳 INSTRUKSI PEMBAYARAN:\nTransfer TOTAL Rp ${order.total.toLocaleString()} ke salah satu metode:\n✅ DANA: 082117455692 a/n DORI\n✅ GOPAY: 083825922898 a/n DORI\n✅ SEABANK: 901068812599 a/n DORI\n✅ QRIS: https://o.uguu.se/ieRBwLbj.jpg\n\n📢 SETELAH TRANSFER, KIRIM BUKTI TRANSFER KE ADMIN INI.\n🔁 Sistem akan otomatis mengirimkan produk sesuai tujuan (ID Game / nomor meter / username Telegram).`;
+    let encoded = encodeURIComponent(pesan);
+    window.open(`https://t.me/momghea?text=${encoded}`, '_blank');
+    showToast("Pesanan dikirim ke admin! Selesaikan pembayaran & kirim bukti.");
+    modal.style.display = 'none';
   };
   document.getElementById('closeModal').onclick = () => document.getElementById('orderModal').style.display = 'none';
   window.onclick = (e) => { if(e.target === document.getElementById('orderModal')) document.getElementById('orderModal').style.display = 'none'; };
+
+  renderTokenChips();
+  renderEwallet();
 </script>
 </body>
 </html>

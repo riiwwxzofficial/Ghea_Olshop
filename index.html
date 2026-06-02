@@ -3,8 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-  <title>GheaShoping | Auto Delivery - Topup Game, Token Listrik & Saldo Digital</title>
-  <!-- Google Fonts + Font Awesome 6 -->
+  <title>GheaShop | Auto Delivery - Topup Game, Token Listrik & Saldo</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <style>
@@ -33,22 +32,22 @@
     .admin-fee-badge { background: rgba(255, 100, 50, 0.2); display: inline-block; padding: 4px 10px; border-radius: 30px; font-size: 0.7rem; font-weight: 600; color: #ffaa66; border: 1px solid #ff8c42; margin: 8px 0 4px; }
     .btn-primary { background: linear-gradient(95deg, #1d72b8, #0e5a9c); border: none; padding: 12px 20px; border-radius: 40px; font-weight: 600; display: inline-flex; align-items: center; gap: 8px; color: white; cursor: pointer; transition: all 0.2s; font-size: 0.85rem; width: fit-content; margin-top: 12px; }
     .btn-primary:hover { background: linear-gradient(95deg, #2a86cf, #126eb3); transform: scale(1.02); }
-    .payment-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.5rem; margin-top: 1rem; }
+    .payment-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; margin-top: 1rem; }
     .payment-card { background: rgba(0, 0, 0, 0.45); backdrop-filter: blur(8px); border-radius: 1.5rem; padding: 1.2rem; text-align: center; border: 1px solid rgba(59, 130, 246, 0.4); }
-    .payment-number { background: #0f172a; padding: 8px 12px; border-radius: 40px; font-family: monospace; font-weight: 600; margin: 10px 0; border: 1px solid #3b82f6; color: #ffd966; word-break: break-all; }
-    .copy-btn { background: #1e2a3e; border: none; padding: 6px 14px; border-radius: 30px; color: white; font-size: 0.7rem; cursor: pointer; transition: 0.1s; margin-top: 6px; }
+    .payment-number { background: #0f172a; padding: 8px 12px; border-radius: 40px; font-family: monospace; font-weight: 600; margin: 10px 0; border: 1px solid #3b82f6; color: #ffd966; }
+    .copy-btn { background: #1e2a3e; border: none; padding: 6px 14px; border-radius: 30px; color: white; font-size: 0.7rem; cursor: pointer; margin-top: 6px; }
     .copy-btn:hover { background: #2d3e5e; }
     .token-chips { display: flex; flex-wrap: wrap; gap: 12px; margin: 20px 0; }
-    .token-chip { background: #0f172ad9; border: 1px solid #3282c7; padding: 10px 20px; border-radius: 60px; font-weight: 700; cursor: pointer; transition: 0.1s; }
+    .token-chip { background: #0f172ad9; border: 1px solid #3282c7; padding: 10px 20px; border-radius: 60px; font-weight: 700; cursor: pointer; }
     .token-chip.active, .token-chip:hover { background: #2563eb; border-color: white; }
     .ewallet-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1.2rem; margin-top: 1rem; }
     .ewallet-item { background: rgba(21, 32, 55, 0.7); border-radius: 1.2rem; padding: 1rem; display: flex; flex-direction: column; gap: 10px; }
     .ewallet-row { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 8px; }
     .amount-input { background: #0f172a; border: 1px solid #2d4a7a; padding: 8px 12px; border-radius: 32px; width: 130px; color: white; text-align: center; }
     .role-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(190px, 1fr)); gap: 1rem; margin: 1rem 0; }
-    .role-card { background: rgba(0, 0, 0, 0.45); padding: 0.9rem; border-radius: 1.2rem; text-align: center; border-left: 3px solid #3b82f6; cursor: pointer; transition: 0.1s; }
+    .role-card { background: rgba(0, 0, 0, 0.45); padding: 0.9rem; border-radius: 1.2rem; text-align: center; border-left: 3px solid #3b82f6; cursor: pointer; }
     .role-card:hover { background: #1e2a47; }
-    .modal { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.8); backdrop-filter: blur(5px); justify-content: center; align-items: center; z-index: 1000; }
+    .modal { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.85); backdrop-filter: blur(8px); justify-content: center; align-items: center; z-index: 1000; }
     .modal-content { background: #0f172ad9; border-radius: 2rem; max-width: 500px; width: 90%; padding: 2rem; border: 1px solid #00c3ff; }
     .modal-content input, .modal-content select { background: #1e293b; border: 1px solid #3b82f6; padding: 12px; border-radius: 40px; width: 100%; margin: 8px 0; color: white; }
     .contact-links { display: flex; flex-wrap: wrap; justify-content: center; gap: 24px; margin: 2rem 0; }
@@ -66,19 +65,20 @@
 <div class="container">
   <div class="navbar">
     <div class="logo-area"><div class="logo-icon"><i class="fas fa-store"></i></div><div class="logo-text"><h1>GheaShop</h1></div><div class="official-badge"><i class="fas fa-check-circle"></i> WEBSITE TOKO RESMI</div></div>
-    <div><i class="fas fa-bolt"></i> Auto Delivery System</div>
+    <div><i class="fas fa-robot"></i> Auto Delivery System</div>
   </div>
+
   <div class="glass-card" style="padding: 2rem; margin: 2rem 0; text-align: center;">
-    <i class="fas fa-robot" style="font-size: 2.5rem; color: #00e0ff;"></i>
+    <i class="fas fa-bolt" style="font-size: 2.5rem; color: #00e0ff;"></i>
     <h2 style="font-size: 1.8rem; margin: 1rem 0;">Sistem Auto Delivery</h2>
-    <p>Setelah transfer sesuai nominal dan kirim bukti, produk akan otomatis dikirim ke ID / nomor tujuan Anda.</p>
+    <p>Isi data tujuan (ID Game / Nomor Meter / Rekening). Transfer sesuai total + kirim bukti ke Admin.<br>Produk akan otomatis masuk ke data yang Anda masukkan.</p>
   </div>
 
   <!-- TOPUP GAMES -->
-  <div><div class="section-title"><i class="fas fa-gamepad"></i> TOPUP ALL GAMES</div><div class="game-grid" id="gameGrid"></div><div class="admin-fee-badge">+ Admin Rp1.000 per transaksi</div></div>
+  <div><div class="section-title"><i class="fas fa-gamepad"></i> TOPUP ALL GAMES</div><div class="game-grid" id="gameGrid"></div><div class="admin-fee-badge">+ Admin Rp1.000</div></div>
 
   <!-- PANEL & ROLE -->
-  <div><div class="section-title"><i class="fas fa-tachometer-alt"></i> PANEL & ROLE TITLE</div><div class="card-grid"><div class="service-card"><i class="fas fa-chart-line" style="font-size:2rem;"></i><h3>Panel Biasa 1-UNLI</h3><div class="price-tag">Rp1.000 - Rp20.000</div><div class="admin-fee-badge">+ Admin Rp1.000</div><button class="btn-primary order-panel-btn" data-produk="Panel Biasa 1-UNLI" data-harga-min="1000" data-harga-max="20000">Beli Panel</button></div><div class="service-card"><i class="fas fa-server"></i><h3>Install Panel + Node - IJO</h3><div class="price-tag">Rp15.000</div><div class="admin-fee-badge">+ Admin Rp1.000</div><button class="btn-primary order-panel-btn" data-produk="Install Panel + Node IJO" data-harga-tetap="15000">Pesan Install</button></div><div class="service-card"><i class="fas fa-globe"></i><h3>Jasa Website Payment Gateway</h3><div class="price-tag">Mulai Rp30.000</div><div class="admin-fee-badge">+ Admin Rp2.000</div><button class="btn-primary order-panel-btn" data-produk="Jasa Website Payment Gateway" data-harga-tetap="30000">Konsultasi</button></div></div><div class="role-grid" id="roleGrid"></div></div>
+  <div><div class="section-title"><i class="fas fa-tachometer-alt"></i> PANEL & ROLE</div><div class="card-grid" id="panelGrid"></div><div class="role-grid" id="roleGrid"></div></div>
 
   <!-- TOKEN LISTRIK -->
   <div><div class="section-title"><i class="fas fa-bolt"></i> TOKEN LISTRIK</div><div class="glass-card" style="padding:1.5rem;"><div class="admin-fee-badge">Admin Rp1.500</div><div class="token-chips" id="tokenChips"></div><div class="flex-between" style="gap:15px;margin-top:20px;"><input type="number" id="customTokenAmount" placeholder="Rp" value="50000" step="1000" min="10000" max="1000000" style="background:#0f172a; border:1px solid #3b82f6; border-radius:40px; padding:10px;color:white;"><button class="btn-primary" id="orderTokenBtn"><i class="fas fa-bolt"></i> Beli Token</button></div></div></div>
@@ -86,698 +86,106 @@
   <!-- TOPUP SALDO -->
   <div><div class="section-title"><i class="fas fa-wallet"></i> TOPUP SALDO DIGITAL</div><div class="admin-fee-badge">+ Admin Rp1.000</div><div class="ewallet-grid" id="ewalletGrid"></div></div>
 
-  <!-- METODE PEMBAYARAN (QRIS, DANA, GOPAY, SEABANK) -->
+  <!-- METODE PEMBAYARAN -->
   <div><div class="section-title"><i class="fas fa-credit-card"></i> METODE PEMBAYARAN</div><div class="payment-grid"><div class="payment-card"><h3><i class="fas fa-qrcode"></i> QRIS</h3><img src="https://o.uguu.se/ieRBwLbj.jpg" alt="QRIS" style="max-width:140px;margin:auto;border-radius:16px;cursor:pointer;" id="qrisImg"><button class="copy-btn" id="copyQrisLink">Salin Link QRIS</button></div><div class="payment-card"><h3><i class="fas fa-wallet"></i> DANA</h3><div class="payment-number">082117455692</div><div>A/N: DORI SXXXXL HXDXXI</div><button class="copy-btn" data-copy="082117455692">Salin No DANA</button></div><div class="payment-card"><h3><i class="fas fa-mobile-alt"></i> GOPAY</h3><div class="payment-number">083825922898</div><div>A/N: DORI SXXXXL HXDXXI</div><button class="copy-btn" data-copy="083825922898">Salin No GOPAY</button></div><div class="payment-card"><h3><i class="fas fa-university"></i> SEABANK</h3><div class="payment-number">901068812599</div><div>A/N: DORI SXXXXL HXDXXI</div><button class="copy-btn" data-copy="901068812599">Salin No Rekening</button></div></div></div>
 
-  <div><div class="section-title"><i class="fas fa-headset"></i> KONFIRMASI & BANTUAN</div><div class="contact-links"><div class="contact-card"><i class="fab fa-telegram fa-2x"></i><a href="https://t.me/momghea" target="_blank">Admin : @momghea</a></div><div class="contact-card"><i class="fab fa-telegram fa-2x"></i><a href="https://t.me/sesionpayment" target="_blank">Channel Payment</a></div></div></div>
-  <footer>© 2025 GheaShop — Auto Delivery System | Transfer sesuai nominal + kirim bukti -> otomatis diproses ke ID tujuan</footer>
+  <div><div class="section-title"><i class="fas fa-headset"></i> KONFIRMASI</div><div class="contact-links"><div class="contact-card"><i class="fab fa-telegram fa-2x"></i><a href="https://t.me/momghea" target="_blank">Admin : @momghea</a></div><div class="contact-card"><i class="fab fa-telegram fa-2x"></i><a href="https://t.me/sesionpayment" target="_blank">Channel Payment</a></div></div></div>
+  <footer>© 2025 GheaShop — Auto Delivery | Transfer sesuai total + kirim bukti → Produk otomatis dikirim ke data tujuan Anda.</footer>
 </div>
 
-<!-- MODAL UNTUK INPUT ID / NOMOR TUJUAN -->
 <div id="orderModal" class="modal"><div class="modal-content"><h3 id="modalTitle">Detail Order</h3><div id="modalFields"></div><button id="submitOrderBtn" class="btn-primary" style="width:100%;margin-top:16px;"><i class="fab fa-telegram"></i> Kirim & Konfirmasi Pembayaran</button><button id="closeModal" style="margin-top:12px;background:transparent;border:1px solid gray;padding:8px;border-radius:40px;width:100%">Tutup</button></div></div>
 
 <script>
-  // DATA PRODUK
-  const games = ["FREE FIRE","PUBG MOBILE","MOBILE LEGENDS","POINT BLANK","ROBLOX","VALORANT","GENSHIN IMPACT","DAN LAINNYA"];
-  const roles = [
-    { name:"Reseller Panel", price:5000 },{ name:"Admin Panel", price:10000 },{ name:"Owner Panel", price:20000 },
-    { name:"PT Panel", price:25000 },{ name:"TK Panel", price:30000 },{ name:"CEO", price:35000 },{ name:"Panel Dev Panel", price:35000 }
-  ];
+  // Daftar produk
+  const games = ["FREE FIRE", "PUBG MOBILE", "MOBILE LEGENDS", "POINT BLANK", "ROBLOX", "GENSHIN IMPACT", "DAN LAINNYA"];
+  const roles = [{ name:"Reseller Panel", price:5000 },{ name:"Admin Panel", price:10000 },{ name:"Owner Panel", price:20000 },{ name:"PT Panel", price:25000 },{ name:"TK Panel", price:30000 },{ name:"CEO", price:35000 },{ name:"Panel Dev Panel", price:35000 }];
+  const panels = [{ name:"Panel Biasa 1-UNLI", priceMin:1000, priceMax:20000, desc:"Unlimited akses" },{ name:"Install Panel + Node IJO", priceFix:15000, desc:"Full support" },{ name:"Jasa Website Payment Gateway", priceFix:300000, desc:"Free custom" }];
   const tokenNominals = [10000,20000,50000,100000,200000,500000,1000000];
   const ewalletMethods = ["DANA","OVO","GOPAY","LINKAJA","SHOPEEPAY","SEABANK","BRI","BCA","BNI","OCBC"];
-  const ADMIN_FEE_GAME = 1000, ADMIN_FEE_TOKEN = 1500, ADMIN_FEE_SALDO = 1000, ADMIN_FEE_ROLE = 1000, ADMIN_FEE_PANEL = 1000;
-  
-  let currentOrder = { type:"", product:"", nominal:0, adminFee:0, total:0, extraData:{} };
+  const ADMIN_FEE = { game:1000, token:1500, saldo:1000, role:1000, panel:1000 };
+  let currentOrder = { type:"", product:"", nominal:0, adminFee:0, total:0, targetField:"" };
 
-  function showToast(msg) { const t=document.getElementById('toastMsg'); t.innerText=msg; t.style.opacity='1'; setTimeout(()=>t.style.opacity='0',1800); }
-  // copy event
-  document.querySelectorAll('.copy-btn').forEach(btn=>{ btn.addEventListener('click',()=>{ if(btn.dataset.copy){ navigator.clipboard.writeText(btn.dataset.copy); showToast(`Nomor ${btn.dataset.copy} disalin`); } }); });
+  function showToast(msg) { let t=document.getElementById('toastMsg'); t.innerText=msg; t.style.opacity='1'; setTimeout(()=>t.style.opacity='0',1800); }
+  document.querySelectorAll('.copy-btn').forEach(btn=>{ btn.onclick=()=>{ if(btn.dataset.copy){ navigator.clipboard.writeText(btn.dataset.copy); showToast(`Nomor ${btn.dataset.copy} disalin`); } } });
   document.getElementById('copyQrisLink')?.addEventListener('click',()=>{ navigator.clipboard.writeText('https://o.uguu.se/ieRBwLbj.jpg'); showToast('Link QRIS disalin'); });
   document.getElementById('qrisImg')?.addEventListener('click',()=>window.open('https://o.uguu.se/ieRBwLbj.jpg','_blank'));
 
-  function openModal(title, fieldsHtml, orderData) { 
-    currentOrder = orderData;
-    document.getElementById('modalTitle').innerHTML = title;
-    document.getElementById('modalFields').innerHTML = fieldsHtml;
-    document.getElementById('orderModal').style.display = 'flex';
-  }
+  function openModal(title, fieldsHtml, orderData) { currentOrder = orderData; document.getElementById('modalTitle').innerHTML = title; document.getElementById('modalFields').innerHTML = fieldsHtml; document.getElementById('orderModal').style.display = 'flex'; }
 
-  // GENERATE UI
+  // Render Game
   const gameContainer = document.getElementById('gameGrid');
-  games.forEach(g=>{ let div=document.createElement('div'); div.className='game-badge'; div.innerHTML=`<i class="fas fa-gamepad"></i> ${g}`; div.onclick=()=>requestGameTopup(g); gameContainer.appendChild(div); });
+  games.forEach(g=>{ let div=document.createElement('div'); div.className='game-badge'; div.innerHTML=`<i class="fas fa-gamepad"></i> ${g}`; div.onclick=()=>{ let fields=`<label>ID Game / Username:</label><input type="text" id="targetId" placeholder="Masukkan ID Game / User ID" required><label>Nominal Topup (Rp):</label><input type="number" id="nominalGame" min="1000" max="1000000" required><small>+ Admin Rp1.000</small>`; openModal(`Topup ${g}`, fields, { type:"game", product:g, adminFee:ADMIN_FEE.game }); }; gameContainer.appendChild(div); });
 
-  function requestGameTopup(gameName){
-    let modalFields = `<label>ID Game / Username:</label><input type="text" id="targetId" placeholder="Masukkan ID Game / User ID" required><label>Nominal Topup (Rp):</label><input type="number" id="nominalGame" placeholder="Contoh: 50000" min="1000" max="1000000" required><small>+ Admin Rp1.000 akan ditambahkan</small>`;
-    openModal(`Topup ${gameName}`, modalFields, { type:"game", product:gameName, adminFee:ADMIN_FEE_GAME });
-  }
+  // Render Panel
+  const panelGrid = document.getElementById('panelGrid');
+  panels.forEach(p=>{ let card=document.createElement('div'); card.className='service-card'; let priceHtml = p.priceFix ? `Rp${p.priceFix.toLocaleString()}` : `Rp${p.priceMin.toLocaleString()} - Rp${p.priceMax.toLocaleString()}`; card.innerHTML=`<i class="fas fa-box"></i><h3>${p.name}</h3><p>${p.desc}</p><div class="price-tag">${priceHtml}</div><div class="admin-fee-badge">+ Admin Rp1.000</div><button class="btn-primary order-panel" data-panel='${JSON.stringify(p)}'>Beli</button>`; panelGrid.appendChild(card); });
+  document.querySelectorAll('.order-panel').forEach(btn=>{ btn.onclick=()=>{ let p=JSON.parse(btn.dataset.panel); let fields=`<label>Nama / Kontak Telegram:</label><input type="text" id="contactName" placeholder="Username" required>`; if(!p.priceFix) fields+=`<label>Nominal (Rp${p.priceMin.toLocaleString()} - ${p.priceMax.toLocaleString()}):</label><input type="number" id="customNominal" min="${p.priceMin}" max="${p.priceMax}" placeholder="Masukkan nominal">`; openModal(`Pesan: ${p.name}`, fields, { type:"panel", product:p.name, adminFee:ADMIN_FEE.panel, panelData:p }); }; });
 
-  // Role grid
+  // Render Role
   const roleGrid = document.getElementById('roleGrid');
-  roles.forEach(r=>{ let card=document.createElement('div'); card.className='role-card'; card.innerHTML=`${r.name}<br><strong>Rp${r.price.toLocaleString()}</strong><br><span style="font-size:0.7rem;">+Admin Rp1.000</span>`; card.onclick=()=>requestRole(r); roleGrid.appendChild(card); });
-  function requestRole(role){
-    let modalFields = `<label>Nama / Username Telegram:</label><input type="text" id="userName" placeholder="Nama akun" required><label>ID Panel (jika ada):</label><input type="text" id="panelId" placeholder="Panel ID / User ID">`;
-    openModal(`Beli Role: ${role.name} (Rp${role.price.toLocaleString()})`, modalFields, { type:"role", product:role.name, nominal:role.price, adminFee:ADMIN_FEE_ROLE, extra:{rolePrice:role.price} });
-  }
+  roles.forEach(r=>{ let card=document.createElement('div'); card.className='role-card'; card.innerHTML=`${r.name}<br><strong>Rp${r.price.toLocaleString()}</strong><br><span style="font-size:0.7rem;">+Admin Rp1.000</span>`; card.onclick=()=>{ let fields=`<label>Username / ID Telegram:</label><input type="text" id="userIdRole" placeholder="Nama akun" required><label>ID Panel (opsional):</label><input type="text" id="panelIdRole" placeholder="ID Panel">`; openModal(`Beli Role: ${r.name}`, fields, { type:"role", product:r.name, nominal:r.price, adminFee:ADMIN_FEE.role }); }; roleGrid.appendChild(card); });
 
-  // Panel tetap (3 panel)
-  document.querySelectorAll('.order-panel-btn').forEach(btn=>{
-    btn.onclick=()=>{
-      let product = btn.dataset.produk;
-      let hargaTetap = btn.dataset.hargaTetap ? parseInt(btn.dataset.hargaTetap) : null;
-      let hargaMin = btn.dataset.hargaMin ? parseInt(btn.dataset.hargaMin) : null;
-      let modalFields = `<label>Nama / Kontak Telegram:</label><input type="text" id="contactName" placeholder="Username atau nomor" required>`;
-      if(!hargaTetap && hargaMin){ modalFields += `<label>Nominal yang diinginkan (Rp${hargaMin.toLocaleString()} - Rp20.000):</label><input type="number" id="customNominalPanel" min="${hargaMin}" max="20000" placeholder="Masukkan nominal">`; }
-      openModal(`Pesan: ${product}`, modalFields, { type:"panel", product:product, adminFee:ADMIN_FEE_PANEL, fixedPrice:hargaTetap, minPrice:hargaMin, extra:{}});
-    };
-  });
-
-  // Token listrik
-  function renderTokenChips(){
-    let container = document.getElementById('tokenChips'); container.innerHTML='';
-    tokenNominals.forEach(n=>{ let chip=document.createElement('div'); chip.className='token-chip'; chip.innerText=`Rp ${n.toLocaleString()}`; chip.onclick=()=>{ document.getElementById('customTokenAmount').value=n; document.querySelectorAll('.token-chip').forEach(c=>c.classList.remove('active')); chip.classList.add('active'); }; container.appendChild(chip); });
-  }
-  document.getElementById('orderTokenBtn').onclick=()=>{
-    let tokenVal = parseInt(document.getElementById('customTokenAmount').value);
-    if(isNaN(tokenVal)) tokenVal=50000;
-    tokenVal = Math.min(Math.max(tokenVal,10000),1000000);
-    let total = tokenVal + ADMIN_FEE_TOKEN;
-    let modalFields = `<label>Nomor Meter / ID Pelanggan Token Listrik:</label><input type="text" id="meterNumber" placeholder="Masukkan nomor meter/listrik" required><label>Jumlah Pembayaran (sudah termasuk admin): Rp ${total.toLocaleString()}</label><input type="hidden" id="realTokenVal" value="${tokenVal}">`;
-    openModal(`Pembayaran Token Listrik (Rp${tokenVal.toLocaleString()} + Admin Rp1.500)`, modalFields, { type:"token", nominal:tokenVal, adminFee:ADMIN_FEE_TOKEN, total:total, product:"Token Listrik" });
-  };
+  // Token chips & order
+  const tokenContainer = document.getElementById('tokenChips');
+  tokenNominals.forEach(n=>{ let chip=document.createElement('div'); chip.className='token-chip'; chip.innerText=`Rp ${n.toLocaleString()}`; chip.onclick=()=>{ document.getElementById('customTokenAmount').value=n; document.querySelectorAll('.token-chip').forEach(c=>c.classList.remove('active')); chip.classList.add('active'); }; tokenContainer.appendChild(chip); });
+  document.getElementById('orderTokenBtn').onclick=()=>{ let val=parseInt(document.getElementById('customTokenAmount').value); if(isNaN(val)) val=50000; val=Math.min(Math.max(val,10000),1000000); let total=val+ADMIN_FEE.token; let fields=`<label>Nomor Meter / ID Pelanggan:</label><input type="text" id="meterNumber" placeholder="Masukkan nomor meter listrik" required><label>Total yang harus dibayar:</label><input type="text" value="Rp ${total.toLocaleString()}" disabled>`; openModal(`Token Listrik Rp${val.toLocaleString()}`, fields, { type:"token", nominal:val, adminFee:ADMIN_FEE.token, total:total }); };
 
   // E-wallet topup
-  function renderEwallet(){
-    let grid = document.getElementById('ewalletGrid'); grid.innerHTML='';
-    ewalletMethods.forEach(m=>{
-      let card = document.createElement('div'); card.className='ewallet-item';
-      card.innerHTML = `<div class="ewallet-row"><strong>${m}</strong><span class="admin-fee-badge">Admin Rp1.000</span></div><div class="ewallet-row"><input type="number" class="amount-input" id="amount-${m}" value="50000" min="1000" max="1000000" step="1000"><button class="btn-primary saldo-topup" data-method="${m}" style="margin-top:0;padding:6px 12px;">Topup + Admin</button></div>`;
-      grid.appendChild(card);
-    });
-    document.querySelectorAll('.saldo-topup').forEach(btn=>{
-      btn.onclick=()=>{
-        let parent = btn.closest('.ewallet-item');
-        let amtInput = parent.querySelector('.amount-input');
-        let amount = parseInt(amtInput.value);
-        if(isNaN(amount)) amount=50000;
-        amount = Math.min(Math.max(amount,1000),1000000);
-        let total = amount + ADMIN_FEE_SALDO;
-        let method = btn.dataset.method;
-         display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 28px;
-      box-shadow: 0 6px 14px rgba(0, 160, 255, 0.3);
-    }
+  const ewalletGrid = document.getElementById('ewalletGrid');
+  ewalletMethods.forEach(m=>{ let card=document.createElement('div'); card.className='ewallet-item'; card.innerHTML=`<div class="ewallet-row"><strong>${m}</strong><span class="admin-fee-badge">Admin Rp1.000</span></div><div class="ewallet-row"><input type="number" class="amount-input" id="amount-${m}" value="50000" min="1000" max="1000000" step="1000"><button class="btn-primary saldo-topup" data-method="${m}" style="margin-top:0;padding:6px 12px;">Topup + Admin</button></div>`; ewalletGrid.appendChild(card); });
+  document.querySelectorAll('.saldo-topup').forEach(btn=>{ btn.onclick=()=>{ let parent=btn.closest('.ewallet-item'); let amt=parseInt(parent.querySelector('.amount-input').value); if(isNaN(amt)) amt=50000; amt=Math.min(Math.max(amt,1000),1000000); let total=amt+ADMIN_FEE.saldo; let method=btn.dataset.method; let fields=`<label>Nomor Akun ${method} / ID Penerima:</label><input type="text" id="destAccount" placeholder="Nomor ${method}" required><label>Total Bayar:</label><input type="text" value="Rp ${total.toLocaleString()}" disabled>`; openModal(`Topup Saldo ${method} (Rp${amt.toLocaleString()})`, fields, { type:"saldo", product:method, nominal:amt, adminFee:ADMIN_FEE.saldo, total:total }); }; });
 
-    .logo-text h1 {
-      font-size: 1.8rem;
-      font-weight: 800;
-      letter-spacing: -0.5px;
-      background: linear-gradient(120deg, #fff, #74d4ff);
-      -webkit-background-clip: text;
-      background-clip: text;
-      color: transparent;
+  // Submit order -> kirim ke admin dengan data tujuan (auto delivery)
+  document.getElementById('submitOrderBtn').onclick = () => {
+    let order = currentOrder;
+    let targetValue = "", detailPesan = "";
+    if(order.type === "game"){
+      let idGame = document.getElementById('targetId')?.value;
+      let nominalGame = parseInt(document.getElementById('nominalGame')?.value);
+      if(!idGame) return alert("Masukkan ID Game!");
+      if(isNaN(nominalGame) || nominalGame<1000) return alert("Nominal minimal Rp1.000");
+      let total = nominalGame + order.adminFee;
+      targetValue = idGame;
+      detailPesan = `🎮 GAME: ${order.product}\n📌 ID TUJUAN: ${idGame}\n💰 Nominal Topup: Rp${nominalGame.toLocaleString()}\n🧾 Admin: Rp${order.adminFee.toLocaleString()}\n💵 TOTAL BAYAR: Rp${total.toLocaleString()}\n\n✅ Setelah transfer, kirim bukti ke admin. Produk akan otomatis masuk ke ID: ${idGame}`;
+    } 
+    else if(order.type === "role"){
+      let user = document.getElementById('userIdRole')?.value;
+      let panelId = document.getElementById('panelIdRole')?.value || "-";
+      if(!user) return alert("Masukkan username Anda");
+      let total = order.nominal + order.adminFee;
+      detailPesan = `👑 ROLE: ${order.product}\n👤 Nama: ${user}\n🆔 Panel ID: ${panelId}\n💵 Harga Role: Rp${order.nominal.toLocaleString()}\n🧾 Admin: Rp${order.adminFee.toLocaleString()}\n💵 TOTAL: Rp${total.toLocaleString()}\n\n✅ Setelah transfer & kirim bukti, Role akan diaktivasi ke akun: ${user}`;
     }
-
-    .official-badge {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      background: rgba(0, 255, 170, 0.12);
-      padding: 6px 14px;
-      border-radius: 40px;
-      font-size: 0.85rem;
-      font-weight: 500;
-      border: 1px solid #00e0ff3d;
-    }
-
-    .official-badge i {
-      color: #2effb0;
-    }
-
-    /* section headings */
-    .section-title {
-      font-size: 2rem;
-      font-weight: 700;
-      margin: 2rem 0 1.5rem 0;
-      display: inline-block;
-      background: linear-gradient(120deg, #ffffff, #7bc5ff);
-      -webkit-background-clip: text;
-      background-clip: text;
-      color: transparent;
-      border-left: 5px solid #00c3ff;
-      padding-left: 20px;
-    }
-
-    .section-sub {
-      color: #94a3b8;
-      margin-bottom: 1.8rem;
-    }
-
-    /* Game badges grid */
-    .game-grid {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 14px;
-      margin: 20px 0 10px;
-    }
-
-    .game-badge {
-      background: rgba(0, 30, 60, 0.7);
-      backdrop-filter: blur(4px);
-      padding: 10px 20px;
-      border-radius: 40px;
-      font-weight: 600;
-      font-size: 0.9rem;
-      border: 1px solid #2d4a7a;
-      transition: all 0.2s;
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-    }
-
-    .game-badge i {
-      color: #3b82f6;
-    }
-
-    .game-badge:hover {
-      background: #1e2f4e;
-      border-color: #3b82f6;
-      transform: scale(1.02);
-    }
-
-    /* Product card grid */
-    .card-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-      gap: 1.8rem;
-      margin: 2rem 0;
-    }
-
-    .service-card {
-      background: rgba(12, 20, 35, 0.75);
-      backdrop-filter: blur(10px);
-      border-radius: 1.5rem;
-      padding: 1.5rem;
-      border: 1px solid rgba(59, 130, 246, 0.3);
-      transition: all 0.2s;
-    }
-
-    .price-tag {
-      font-weight: 800;
-      font-size: 1.4rem;
-      color: #ffd966;
-      margin: 12px 0;
-    }
-
-    .admin-fee-badge {
-      background: rgba(255, 100, 50, 0.2);
-      display: inline-block;
-      padding: 4px 10px;
-      border-radius: 30px;
-      font-size: 0.7rem;
-      font-weight: 600;
-      color: #ffaa66;
-      border: 1px solid #ff8c42;
-      margin: 8px 0 4px;
-      letter-spacing: 0.3px;
-    }
-
-    .btn-telegram {
-      background: linear-gradient(95deg, #1d72b8, #0e5a9c);
-      border: none;
-      padding: 12px 20px;
-      border-radius: 40px;
-      font-weight: 600;
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      color: white;
-      cursor: pointer;
-      transition: all 0.2s;
-      font-size: 0.85rem;
-      text-decoration: none;
-      width: fit-content;
-      margin-top: 12px;
-    }
-
-    .btn-telegram:hover {
-      background: linear-gradient(95deg, #2a86cf, #126eb3);
-      transform: scale(1.02);
-      box-shadow: 0 6px 14px #0a4b7a50;
-    }
-
-    /* Token listrik chips */
-    .token-chips {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-      margin: 20px 0;
-    }
-    .token-chip {
-      background: #0f172ad9;
-      border: 1px solid #3282c7;
-      padding: 10px 20px;
-      border-radius: 60px;
-      font-weight: 700;
-      cursor: pointer;
-      transition: 0.1s;
-    }
-    .token-chip.active, .token-chip:hover {
-      background: #2563eb;
-      border-color: white;
-      color: white;
-    }
-
-    /* ewallet grid */
-    .ewallet-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-      gap: 1.2rem;
-      margin-top: 1rem;
-    }
-    .ewallet-item {
-      background: rgba(21, 32, 55, 0.7);
-      border-radius: 1.2rem;
-      padding: 1rem;
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-    }
-    .ewallet-row {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      flex-wrap: wrap;
-    }
-    .ewallet-name {
-      font-weight: 700;
-      font-size: 1.1rem;
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-    .amount-input {
-      background: #0f172a;
-      border: 1px solid #2d4a7a;
-      padding: 8px 12px;
-      border-radius: 32px;
-      width: 130px;
-      color: white;
-      font-weight: 500;
-      text-align: center;
-    }
-    .small-btn {
-      background: #0077b6;
-      padding: 6px 14px;
-      border-radius: 32px;
-      font-size: 0.75rem;
-      font-weight: 600;
-      margin-top: 0;
-    }
-    .fee-info {
-      font-size: 0.7rem;
-      background: #1e293b;
-      padding: 4px 8px;
-      border-radius: 20px;
-      display: inline-block;
-      color: #facc15;
-    }
-
-    /* role title price list */
-    .role-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-      gap: 1rem;
-      margin: 1rem 0;
-    }
-    .role-card {
-      background: rgba(0, 0, 0, 0.45);
-      padding: 0.9rem;
-      border-radius: 1.2rem;
-      text-align: center;
-      border-left: 3px solid #3b82f6;
-      cursor: pointer;
-      transition: 0.1s;
-    }
-    .role-card:hover {
-      background: #1e2a47;
-    }
-
-    hr {
-      border-color: #1e2b3c;
-      margin: 20px 0;
-    }
-
-    footer {
-      margin-top: 4rem;
-      padding: 2rem 0;
-      text-align: center;
-      border-top: 1px solid #1e2a3a;
-    }
-
-    .contact-links {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 24px;
-      margin: 2rem 0;
-    }
-    .contact-card {
-      background: rgba(0, 0, 0, 0.5);
-      border-radius: 2rem;
-      padding: 0.9rem 1.6rem;
-      display: inline-flex;
-      align-items: center;
-      gap: 12px;
-      backdrop-filter: blur(8px);
-      transition: 0.2s;
-    }
-    .contact-card a {
-      color: white;
-      text-decoration: none;
-      font-weight: 500;
-    }
-
-    @media (max-width: 760px) {
-      .container {
-        padding: 0 18px;
+    else if(order.type === "panel"){
+      let contact = document.getElementById('contactName')?.value;
+      if(!contact) return alert("Masukkan kontak Anda");
+      let panel = order.panelData;
+      let finalPrice = panel.priceFix;
+      if(!finalPrice){
+        let custom = parseInt(document.getElementById('customNominal')?.value);
+        finalPrice = (custom && custom>=panel.priceMin && custom<=panel.priceMax) ? custom : panel.priceMin;
       }
-      .section-title {
-        font-size: 1.6rem;
-      }
-      .logo-text h1 {
-        font-size: 1.3rem;
-      }
+      let total = finalPrice + order.adminFee;
+      detailPesan = `📦 PANEL: ${order.product}\n📞 Kontak: ${contact}\n💵 Harga Produk: Rp${finalPrice.toLocaleString()}\n🧾 Admin: Rp${order.adminFee.toLocaleString()}\n💵 TOTAL: Rp${total.toLocaleString()}\n\n✅ Setelah konfirmasi pembayaran, panel akan dikirim ke kontak ${contact}`;
     }
-
-    .flex-between {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
+    else if(order.type === "token"){
+      let meter = document.getElementById('meterNumber')?.value;
+      if(!meter) return alert("Masukkan nomor meter listrik!");
+      let total = order.nominal + order.adminFee;
+      detailPesan = `⚡ TOKEN LISTRIK\n🔢 Nomor Meter: ${meter}\n💰 Harga Token: Rp${order.nominal.toLocaleString()}\n🧾 Admin: Rp${order.adminFee.toLocaleString()}\n💵 TOTAL: Rp${total.toLocaleString()}\n\n✅ Setelah transfer & kirim bukti, token akan otomatis dikirim ke nomor meter: ${meter}`;
     }
-  </style>
-</head>
-<body>
-<div class="bg-digital"></div>
-
-<div class="container">
-  <!-- Header & Logo Shop -->
-  <div class="navbar">
-    <div class="logo-area">
-      <div class="logo-icon">
-        <i class="fas fa-store"></i>
-      </div>
-      <div class="logo-text">
-        <h1>GheaShop</h1>
-      </div>
-      <div class="official-badge">
-        <i class="fas fa-check-circle"></i> WEBSITE TOKO RESMI
-      </div>
-    </div>
-    <div>
-      <i class="fas fa-shield-alt" style="color:#2effb0;"></i> 
-      <span style="font-size:0.85rem;">Terpercaya • Aman • Cepat</span>
-    </div>
-  </div>
-
-  <!-- Hero -->
-  <div class="glass-card" style="padding: 2rem; margin: 2rem 0; text-align: center;">
-    <i class="fas fa-crown" style="font-size: 2.5rem; color: gold;"></i>
-    <h2 style="font-size: 1.8rem; margin: 1rem 0;">Toko Digital GheaDev</h2>
-    <p style="font-size: 1.2rem; max-width: 700px; margin: 0 auto;">Mudah, Aman, Nyaman, dan Terpercaya<br> #1 Topup Games, Panel, Token Listrik & Saldo Digital</p>
-    <div style="margin-top: 20px; display: flex; gap: 14px; justify-content: center; flex-wrap: wrap;">
-      <span class="game-badge"><i class="fas fa-bolt"></i> Proses Kilat</span>
-      <span class="game-badge"><i class="fas fa-lock"></i> 100% Aman</span>
-      <span class="game-badge"><i class="fas fa-headset"></i> CS 24/7</span>
-      <span class="game-badge"><i class="fas fa-coins"></i> Ada Biaya Admin</span>
-    </div>
-  </div>
-
-  <!-- 1. TOPUP GAMES ONLINE + FEE -->
-  <div>
-    <div class="section-title"><i class="fas fa-gamepad me-2"></i> TOP UP ALL GAMES ONLINE 🛍️</div>
-    <div class="game-grid">
-      <div class="game-badge"><i class="fab fa-fort-awesome"></i> FREE FIRE</div>
-      <div class="game-badge"><i class="fas fa-crosshairs"></i> PUBG MOBILE</div>
-      <div class="game-badge"><i class="fas fa-skull"></i> MOBILE LEGENDS</div>
-      <div class="game-badge"><i class="fas fa-fire"></i> POINT BLANK</div>
-      <div class="game-badge"><i class="fas fa-cube"></i> ROBLOX</div>
-      <div class="game-badge"><i class="fas fa-plus-circle"></i> DAN GAME LAINNYA</div>
-    </div>
-    <div class="admin-fee-badge"><i class="fas fa-receipt"></i> Biaya Admin per Topup: Rp1.000</div>
-    <p class="section-sub" style="margin-top: 8px;">Setiap transaksi topup game dikenakan biaya admin Rp1.000 (sudah termasuk pajak).</p>
-  </div>
-
-  <!-- 2. PANEL & ROLE TITLE + FEE -->
-  <div>
-    <div class="section-title"><i class="fas fa-tachometer-alt"></i> TOKO PANEL DAN ROLE TITLE ✅</div>
-    <div class="card-grid">
-      <!-- Panel Biasa -->
-      <div class="service-card">
-        <i class="fas fa-chart-line" style="font-size: 2rem; color: #3b82f6;"></i>
-        <h3>Panel Biasa 1-UNLI</h3>
-        <p>Unlimited akses & stok melimpah</p>
-        <div class="price-tag">Rp1.000 - Rp20.000</div>
-        <div class="admin-fee-badge"><i class="fas fa-file-invoice-dollar"></i> + Admin Rp1.000</div>
-        <a href="#" class="btn-telegram panel-order-btn" data-produk="Panel Biasa 1-UNLI (harga produk Rp1.000-20.000)"><i class="fab fa-telegram"></i> Beli Panel via Telegram</a>
-      </div>
-      <!-- Install Panel + Node -->
-      <div class="service-card">
-        <i class="fas fa-server" style="font-size: 2rem; color: #10b981;"></i>
-        <h3>Install Panel + Node - IJO</h3>
-        <p>Full support instalasi + node ijo</p>
-        <div class="price-tag">Rp15.000</div>
-        <div class="admin-fee-badge"><i class="fas fa-file-invoice-dollar"></i> + Admin Rp1.000</div>
-        <a href="#" class="btn-telegram panel-order-btn" data-produk="Install Panel + Node IJO (harga Rp15.000)"><i class="fab fa-telegram"></i> Pesan Install</a>
-      </div>
-      <!-- Jasa Website Payment Gateway -->
-      <div class="service-card">
-        <i class="fas fa-globe" style="font-size: 2rem; color: #f97316;"></i>
-        <h3>Jasa Website Payment Gateway</h3>
-        <p>Free request background / nama website custom</p>
-        <div class="price-tag">Mulai Rp30.000</div>
-        <div class="admin-fee-badge"><i class="fas fa-file-invoice-dollar"></i> + Admin Rp2.000 (konsultasi)</div>
-        <a href="#" class="btn-telegram panel-order-btn" data-produk="Jasa Website Payment Gateway + free custom"><i class="fab fa-telegram"></i> Konsultasi Gratis</a>
-      </div>
-    </div>
-    
-    <!-- Role Title Panel (dengan harga variasi) -->
-    <div style="margin-top: 1rem;">
-      <h3 style="margin: 1rem 0 0.5rem;"><i class="fas fa-tags"></i> Role Title Panel (Reseller - CEO - Dev)</h3>
-      <div class="admin-fee-badge" style="margin-bottom: 10px;"><i class="fas fa-wallet"></i> Setiap pembelian Role dikenakan admin fee Rp1.000</div>
-      <div class="role-grid" id="roleGrid">
-        <div class="role-card" data-role="Reseller Panel" data-price="5000">Reseller Panel <br> <strong>Rp5.000</strong><br><span style="font-size:0.7rem;color:#facc15;">+Admin Rp1.000</span></div>
-        <div class="role-card" data-role="Admin Panel" data-price="10000">Admin Panel <br> <strong>Rp10.000</strong><br><span style="font-size:0.7rem;color:#facc15;">+Admin Rp1.000</span></div>
-        <div class="role-card" data-role="Owner Panel" data-price="20000">Owner Panel <br> <strong>Rp20.000</strong><br><span style="font-size:0.7rem;color:#facc15;">+Admin Rp1.000</span></div>
-        <div class="role-card" data-role="PT Panel" data-price="25000">PT Panel <br> <strong>Rp25.000</strong><br><span style="font-size:0.7rem;color:#facc15;">+Admin Rp1.000</span></div>
-        <div class="role-card" data-role="TK Panel" data-price="30000">TK Panel <br> <strong>Rp30.000</strong><br><span style="font-size:0.7rem;color:#facc15;">+Admin Rp1.000</span></div>
-        <div class="role-card" data-role="CEO" data-price="35000">CEO <br> <strong>Rp35.000</strong><br><span style="font-size:0.7rem;color:#facc15;">+Admin Rp1.000</span></div>
-        <div class="role-card" data-role="Panel Dev Panel" data-price="50000">Panel Dev Panel <br> <strong>Rp35.000</strong><br><span style="font-size:0.7rem;color:#facc15;">+Admin Rp1.000</span></div>
-      </div>
-    </div>
-  </div>
-
-  <!-- 3. PEMBAYARAN TOKEN LISTRIK + FEE -->
-  <div>
-    <div class="section-title"><i class="fas fa-bolt"></i> PEMBAYARAN TOKEN LISTRIK ⚡</div>
-    <div class="glass-card" style="padding: 1.5rem;">
-      <p class="section-sub">Harga token listrik mulai dari <strong>Rp10.000</strong> hingga <strong>Rp1.000.000</strong> — pilih nominal instan</p>
-      <div class="admin-fee-badge"><i class="fas fa-hand-holding-usd"></i> Biaya Admin Token Listrik: Rp1.500 per transaksi</div>
-      <div class="token-chips" id="tokenChips"></div>
-      <div class="flex-between" style="gap: 15px; margin-top: 20px;">
-        <div style="display: flex; gap: 12px; align-items: center; flex-wrap: wrap;">
-          <span>Atau nominal custom : </span>
-          <input type="number" id="customTokenAmount" placeholder="Rp" value="50000" step="1000" min="10000" max="1000000" style="background:#0f172a; border:1px solid #3b82f6; border-radius: 40px; padding: 10px 18px; color:white;">
-          <button class="btn-telegram" id="orderTokenBtn" style="margin-top:0"><i class="fab fa-telegram"></i> Beli Token + Admin</button>
-        </div>
-      </div>
-      <p class="section-sub" style="margin-top: 12px; font-size: 0.75rem;">*Total = Harga Token + Biaya Admin Rp1.500</p>
-    </div>
-  </div>
-
-  <!-- 4. PRODUK TOPUP SALDO (E-WALLET & BANK) + FEE -->
-  <div>
-    <div class="section-title"><i class="fas fa-wallet"></i> TOPUP SALDO DIGITAL</div>
-    <p class="section-sub">Isi Saldo DANA, OVO, GOPAY, LinkAja, ShopeePay, Bank, dll. (Rp1.000 - Rp1.000.000)</p>
-    <div class="admin-fee-badge" style="margin-bottom: 15px;"><i class="fas fa-coins"></i> Biaya Admin per Topup Saldo: Rp1.000 (akan ditambahkan ke total)</div>
-    <div class="ewallet-grid" id="ewalletGrid"></div>
-  </div>
-
-  <!-- CS ADMIN & GROUP CHANNEL -->
-  <div>
-    <div class="section-title"><i class="fas fa-headset"></i> Layanan Konsumen & Grup Resmi</div>
-    <div class="contact-links">
-      <div class="contact-card">
-        <i class="fab fa-telegram fa-2x" style="color:#26A5E4;"></i>
-        <a href="https://t.me/momghea" target="_blank">CS Admin : @momghea</a>
-      </div>
-      <div class="contact-card">
-        <i class="fab fa-telegram fa-2x" style="color:#26A5E4;"></i>
-        <a href="https://t.me/sesionpayment" target="_blank">Channel Payment</a>
-      </div>
-      <div class="contact-card">
-        <i class="fab fa-telegram fa-2x" style="color:#26A5E4;"></i>
-        <a href="https://t.me/gheacanzs" target="_blank">Group Official GheaShop</a>
-      </div>
-    </div>
-    <div style="background: rgba(0,45,70,0.4); border-radius: 1rem; padding: 1rem; text-align: center; margin: 20px 0;">
-      <i class="fas fa-clock"></i> Layanan 24 Jam | Proses Cepat | Garansi aman 100% | Ada fee admin transparan
-    </div>
-  </div>
-
-  <footer>
-    <p>&copy; 2025 GheaShop — Toko Digital Terpercaya. Mudah, Aman, Nyaman.</p>
-    <p style="font-size: 0.75rem; margin-top: 8px;"><i class="fas fa-shield-alt"></i> Official partner resmi topup & panel terlisensi | Biaya admin sudah tertera di setiap produk</p>
-  </footer>
-</div>
-
-<script>
-  // Data E-wallet
-  const paymentMethods = [
-    { name: "DANA", icon: "fas fa-wallet", min: 1000, max: 1000000 },
-    { name: "OVO", icon: "fas fa-mobile-alt", min: 1000, max: 1000000 },
-    { name: "GOPAY", icon: "fas fa-credit-card", min: 1000, max: 1000000 },
-    { name: "LINKAJA", icon: "fas fa-link", min: 1000, max: 1000000 },
-    { name: "SHOPEEPAY", icon: "fas fa-shopping-cart", min: 1000, max: 1000000 },
-    { name: "SEABANK", icon: "fas fa-bank", min: 1000, max: 1000000 },
-    { name: "BRI", icon: "fas fa-university", min: 1000, max: 1000000 },
-    { name: "BCA", icon: "fas fa-building-columns", min: 1000, max: 1000000 },
-    { name: "BNI", icon: "fas fa-landmark", min: 1000, max: 1000000 },
-    { name: "OCBC", icon: "fas fa-chart-line", min: 1000, max: 1000000 }
-  ];
-  const tokenNominals = [10000, 20000, 50000, 100000, 200000, 500000, 1000000];
-  const ADMIN_FEE_GAME = 1000;
-  const ADMIN_FEE_TOKEN = 1500;
-  const ADMIN_FEE_SALDO = 1000;
-  const ADMIN_FEE_ROLE = 1000;
-  const ADMIN_FEE_PANEL = 1000;
-
-  // render token chips
-  const tokenContainer = document.getElementById('tokenChips');
-  function renderTokenChips() {
-    tokenContainer.innerHTML = '';
-    tokenNominals.forEach(nominal => {
-      const chip = document.createElement('div');
-      chip.className = 'token-chip';
-      chip.innerText = `Rp ${nominal.toLocaleString('id-ID')}`;
-      chip.addEventListener('click', () => {
-        document.getElementById('customTokenAmount').value = nominal;
-        document.querySelectorAll('.token-chip').forEach(c => c.classList.remove('active'));
-        chip.classList.add('active');
-      });
-      tokenContainer.appendChild(chip);
-    });
-  }
-
-  // render ewallet dengan fee info
-  function renderEwallet() {
-    const grid = document.getElementById('ewalletGrid');
-    if (!grid) return;
-    grid.innerHTML = '';
-    paymentMethods.forEach(method => {
-      const card = document.createElement('div');
-      card.className = 'ewallet-item';
-      card.innerHTML = `
-        <div class="ewallet-row">
-          <div class="ewallet-name">
-            <i class="${method.icon}"></i> <span>${method.name}</span>
-          </div>
-          <div class="fee-info"><i class="fas fa-receipt"></i> Admin Rp1.000</div>
-        </div>
-        <div class="ewallet-row">
-          <input type="number" class="amount-input" id="amount-${method.name.replace(/\s/g,'')}" value="50000" min="${method.min}" max="${method.max}" step="1000">
-          <button class="small-btn btn-telegram saldo-topup-btn" data-method="${method.name}" style="margin:0"><i class="fab fa-telegram"></i> Topup + Admin</button>
-        </div>
-        <div class="fee-info" style="background:transparent; padding:0;">Total = jumlah + Rp1.000 admin</div>
-      `;
-      grid.appendChild(card);
-    });
-    // attach event saldo
-    document.querySelectorAll('.saldo-topup-btn').forEach(btn => {
-      btn.addEventListener('click', (e) => {
-        const parentItem = btn.closest('.ewallet-item');
-        const amountInput = parentItem.querySelector('.amount-input');
-        let amount = parseInt(amountInput.value);
-        if (isNaN(amount)) amount = 50000;
-        if (amount < 1000) amount = 1000;
-        if (amount > 1000000) amount = 1000000;
-        const methodName = btn.getAttribute('data-method') || 'Saldo';
-        const total = amount + ADMIN_FEE_SALDO;
-        const msg = `Halo Admin GheaShop, saya ingin TOPUP SALDO ${methodName} sebesar Rp ${amount.toLocaleString('id-ID')} + Biaya Admin Rp${ADMIN_FEE_SALDO.toLocaleString('id-ID')} = TOTAL Rp ${total.toLocaleString('id-ID')}. Mohon diproses.`;
-        window.open(`https://t.me/momghea?text=${encodeURIComponent(msg)}`, '_blank');
-      });
-    });
-  }
-
-  // Token Listrik order + admin
-  function initTokenOrder() {
-    const orderBtn = document.getElementById('orderTokenBtn');
-    if (orderBtn) {
-      orderBtn.addEventListener('click', () => {
-        let customAmount = parseInt(document.getElementById('customTokenAmount').value);
-        if (isNaN(customAmount)) customAmount = 50000;
-        if (customAmount < 10000) customAmount = 10000;
-        if (customAmount > 1000000) customAmount = 1000000;
-        const total = customAmount + ADMIN_FEE_TOKEN;
-        const msg = `Halo CS GheaShop, saya ingin membeli TOKEN LISTRIK senilai Rp ${customAmount.toLocaleString('id-ID')} + Biaya Admin Rp${ADMIN_FEE_TOKEN.toLocaleString('id-ID')} = TOTAL Rp ${total.toLocaleString('id-ID')}. Mohon bantu proses pembayaran.`;
-        window.open(`https://t.me/momghea?text=${encodeURIComponent(msg)}`, '_blank');
-      });
+    else if(order.type === "saldo"){
+      let dest = document.getElementById('destAccount')?.value;
+      if(!dest) return alert("Masukkan nomor akun tujuan!");
+      let total = order.nominal + order.adminFee;
+      detailPesan = `💳 TOPUP SALDO ${order.product}\n📱 Tujuan: ${dest}\n💰 Jumlah Saldo: Rp${order.nominal.toLocaleString()}\n🧾 Admin: Rp${order.adminFee.toLocaleString()}\n💵 TOTAL BAYAR: Rp${total.toLocaleString()}\n\n✅ Setelah transfer & kirim bukti, saldo akan otomatis masuk ke akun: ${dest}`;
     }
-  }
-
-  // Panel & Role buttons dengan admin fee
-  function enhanceProductButtons() {
-    // Panel card (service-card)
-    document.querySelectorAll('.panel-order-btn').forEach(btn => {
-      btn.addEventListener('click', (e) => {
-        e.preventDefault();
-        const produkInfo = btn.getAttribute('data-produk') || "Layanan Panel";
-        let msg = `Halo Admin GheaShop, saya tertarik dengan produk: ${produkInfo}. Dengan biaya admin Rp${ADMIN_FEE_PANEL.toLocaleString('id-ID')} (total harga produk + admin). Mohon info lebih lanjut.`;
-        if (produkInfo.includes("Panel Biasa")) msg = `Halo kak, saya ingin order Panel Biasa 1-Unli (harga produk Rp1.000-20.000) + Admin Rp1.000. Total nanti sesuai pilihan.`;
-        if (produkInfo.includes("Install Panel")) msg = `Halo min, saya mau order Install Panel + Node IJO harga Rp15.000 + Admin Rp1.000 = Total Rp16.000. Mohon dibantu.`;
-        if (produkInfo.includes("Jasa Website")) msg = `Halo GheaShop, saya minat Jasa Pembuatan Website Payment Gateway + free custom. Ada biaya admin Rp2.000 untuk konsultasi. Tolong detailnya.`;
-        window.open(`https://t.me/momghea?text=${encodeURIComponent(msg)}`, '_blank');
-      });
-    });
-
-    // Role title cards
-    const roleCards = document.querySelectorAll('.role-card');
-    roleCards.forEach(card => {
-      card.addEventListener('click', () => {
-        const roleText = card.getAttribute('data-role') || card.innerText.split('\n')[0].trim();
-        const priceMatch = card.innerText.match(/Rp([0-9.]+)/);
-        let hargaProduk = priceMatch ? parseInt(priceMatch[1].replace(/\./g,'')) : 5000;
-        const total = hargaProduk + ADMIN_FEE_ROLE;
-        const msg = `Halo min, saya ingin mengambil role title ${roleText} dengan harga produk Rp ${hargaProduk.toLocaleString('id-ID')} + Biaya Admin Rp${ADMIN_FEE_ROLE.toLocaleString('id-ID')} = TOTAL Rp ${total.toLocaleString('id-ID')}. Apakah tersedia?`;
-        window.open(`https://t.me/momghea?text=${encodeURIComponent(msg)}`, '_blank');
-      });
-    });
-  }
-
-  // Game badges (menyertakan admin fee)
-  const gameBadges = document.querySelectorAll('.game-badge');
-  gameBadges.forEach(badge => {
-    badge.style.cursor = 'pointer';
-    badge.addEventListener('click', () => {
-      let gameName = badge.innerText.trim();
-      const msg = `Halo GheaShop, saya ingin topup game: ${gameName}. (Biaya Admin Rp${ADMIN_FEE_GAME.toLocaleString('id-ID')} per transaksi). Mohon info harga + total.`;
-      window.open(`https://t.me/momghea?text=${encodeURIComponent(msg)}`, '_blank');
-    });
-  });
-
-  // Inisialisasi semuanya
-  renderTokenChips();
-  renderEwallet();
-  initTokenOrder();
-  enhanceProductButtons();
-
-  // set active token default
-  if(tokenNominals.length) {
-    const firstChip = document.querySelector('.token-chip');
-    if(firstChip) firstChip.classList.add('active');
-  }
+    let pesan = `🛒 *ORDER BARU - GHEAA AUTO DELIVERY*\n\n${detailPesan}\n\n📌 INSTRUKSI PEMBAYARAN:\nTransfer TOTAL Rp ${order.total || (order.nominal+order.adminFee)} ke:\nDANA: 082117455692 a/n DORI\nGOPAY: 083825922898 a/n DORI\nSEABANK: 901068812599 a/n DORI\nQRIS: https://o.uguu.se/ieRBwLbj.jpg\n\n⚠️ Setelah transfer, *KIRIM BUKTI TRANSFER* ke admin ini.\n🔁 Sistem akan otomatis mengirim produk ke data yang sudah Anda masukkan.`;
+    window.open(`https://t.me/momghea?text=${encodeURIComponent(pesan)}`, '_blank');
+    showToast("Pesanan dikirim! Selesaikan pembayaran & kirim bukti.");
+    document.getElementById('orderModal').style.display = 'none';
+  };
+  document.getElementById('closeModal').onclick = () => document.getElementById('orderModal').style.display = 'none';
+  window.onclick = (e) => { if(e.target === document.getElementById('orderModal')) document.getElementById('orderModal').style.display = 'none'; };
 </script>
 </body>
 </html>
